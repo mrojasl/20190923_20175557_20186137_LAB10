@@ -24,13 +24,12 @@
 
     <style>
         body{
-            background-image: url("Inicio_Sesion/fondo.jpg");
             background-position: center ;
         }
     </style>
 </head>
-<body background="Inicio_Sesion/fondo.jpg">
-<div class="modal-dialog text-center w-75 mt-5 rounded " style="background-color: black" >
+<body background ="Inicio_Sesion/fondo.jpg")>
+<div class="modal-content text-center w-75 mt-5 rounded align-content-center " style="background-color: black" >
         <div class="col-sm-14">
                 <div class="mb-3">
 
@@ -63,7 +62,7 @@
                 </div>
         </div>
     </div>
-    </div>
+</div>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
