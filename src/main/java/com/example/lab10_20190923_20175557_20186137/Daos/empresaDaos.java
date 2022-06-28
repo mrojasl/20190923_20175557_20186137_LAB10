@@ -12,7 +12,7 @@ public class empresaDaos extends BaseDao{
         try {
             String sql = "select  v.idviaje as \"idviaje\", v.fecha_reserva, v.fecha_viaje, ciu.ciudad as \"ciudad de origen\",\n" +
                     "ci.ciudad as \"ciudad de destino\", se.seguro, v.cantidad_tickets as \"numero boletos\",\n" +
-                    "(v.cantidad_tickets*co.costo) as \"costo total\"\n" +
+                    "round(v.cantidad_tickets*co.costo) as \"costo total\"\n" +
                     "from viaje v inner join seguro se on (v.seguro_idseguro=se.idseguro)\n" +
                     "inner join costosciudad co on (co.idcostosciudad=v.idcostosciudad)\n" +
                     "inner join ciudad ciu on (ciu.idciudad = co.idciudad_origen)\n" +
@@ -78,4 +78,23 @@ public class empresaDaos extends BaseDao{
         return result;
     }
     //AÑADIR VIAJES
+    private static String sql_crearViaje="insert into viaje (usuario_codigopucp,fecha_reserva, fecha_viaje, cantidad_tickets, idcostosciudad, \n" +
+            "seguro_idseguro)\n" +
+            "values (?,now(), ?, ?,?,?);";
+    public void crearViaje(BViaje viaje){
+        try (Connection conn = this.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql_crearViaje)
+        ) {
+            pstmt.setString(1, viaje.getCodido_pucp());
+            pstmt.setString(2, viaje.getFecha_reserva());
+            pstmt.setString(3, viaje.getFecha_viaje());
+            pstmt.setInt(4, viaje.getCantidad_tickets());
+            pstmt.setInt(5, viaje.getIdcostos_ciudad());
+            pstmt.setInt(6, viaje.getIdseguro());
+
+            pstmt.executeUpdate();
+        } catch (SQLException error) {
+            error.printStackTrace();
+        }
+    }
 }
