@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>LAB 04</title>
+    <title>LAB10</title>
 
     <!-- Custom fonts for this template-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -32,31 +32,35 @@
 <body background="Inicio_Sesion/fondo.jpg">
 <div class="modal-dialog text-center w-75 mt-5 rounded " style="background-color: black" >
         <div class="col-sm-14">
-            <form>
                 <div class="mb-3">
+
                     <img class="mb-4 mt-4" src="Inicio_Sesion/logo.png" alt=" " width="230" height="230">
-                    <p class="text-center" style="color: aliceblue; font-size: 25px" ><b>Bienvenido a TeleViajero</b></p>
-                    <form class = "user">
+                    <p class="text-center" style="color: aliceblue; font-size: 25px" ><b>Bienvenido TeleViajero</b></p>
+
+                    <form method="post" action="<%=request.getContextPath()%>/loginServlet?action=login">
+
                         <div class="mb-3 mt-3 ms-4 me-4">
-                            <input type="email" class="form-control form-control-user" id="floatingInput" placeholder="Usuario">
+                            <input type="text" class="form-control form-control-user" placeholder="Usuario">
                         </div>
                         <div class="mb-3 mt-3 ms-4 me-4">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                            <input type="text" class="form-control" placeholder="Contraseña">
                         </div>
                         <div class="mb-3 mt-4">
-                            <a href="pagina_principal.html" class="btn btn-primary btn-user btn-block">
+                            <button type="submit" class="btn btn-primary btn-user btn-block">
                                 Ingresar
-                            </a>
+                            </button>
                         </div>
+
                     </form>
+
                     <div class="mb-1">
-                        <span><a href="#" style="color: red">Términos y condiciones</a></span>
+                        <span><a href="#" style="color: red">Soy nuevo y quiero registrarme</a></span>
                     </div>
                     <div>
                         <br>
                     </div>
+
                 </div>
-            </form>
         </div>
     </div>
     </div>
