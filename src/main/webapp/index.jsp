@@ -61,6 +61,9 @@
                         <% if (request.getParameter("error") != null) { %>
                         <div class="text-danger mb-2">Error en usuario o contraseña</div>
                         <%}%>
+                        <% if (request.getParameter("registro") != null) { %>
+                        <div class="text-info mb-2">Cuenta creada con éxito</div>
+                        <%}%>
                         <div class="mb-3 mt-4">
                             <button type="submit" class="btn btn-primary btn-user btn-block">
                                 Ingresar

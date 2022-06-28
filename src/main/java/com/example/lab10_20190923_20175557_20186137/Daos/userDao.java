@@ -1,5 +1,6 @@
 package com.example.lab10_20190923_20175557_20186137.Daos;
 
+import com.example.lab10_20190923_20175557_20186137.Beans.BEspecialidad;
 import com.example.lab10_20190923_20175557_20186137.Beans.BUsuario;
 
 import java.sql.*;
@@ -60,5 +61,42 @@ public class userDao extends BaseDao{
         }
 
         return bUsuario;
+    }
+    public ArrayList<BEspecialidad> listarEspecialidad(){
+        ArrayList<BEspecialidad> listaEspecialidad = new ArrayList<>();
+
+        try (Connection conn = this.getConnection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery("SELECT * FROM especialidad")) {
+
+            while (rs.next()) {
+                BEspecialidad e = new BEspecialidad();
+                e.setIdEspecialidad(rs.getInt(1));
+                e.setEspecialidad(rs.getString(2));
+                listaEspecialidad.add(e);
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return listaEspecialidad;
+    }
+    public void crearUsuario(BUsuario usuario){
+        String sql="insert into usuario (codigopucp,nombre,apellido,edad,correopucp,idespecialidad,password) values \n" +
+                "(?,?,?,?,?,?,?);";
+        try (Connection conn = this.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)
+        ) {
+            pstmt.setString(1, usuario.getCodigoPucp());
+            pstmt.setString(2, usuario.getNombre());
+            pstmt.setString(3, usuario.getApellido());
+            pstmt.setInt(4, usuario.getEdad());
+            pstmt.setString(5, usuario.getCorreoPucp());
+            pstmt.setInt(6, usuario.getIdespecialidad());
+            pstmt.setString(7, usuario.getPassword());
+
+            pstmt.executeUpdate();
+        } catch (SQLException error) {
+            error.printStackTrace();
+        }
     }
 }

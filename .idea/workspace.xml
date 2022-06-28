@@ -10,12 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a42935e4-4829-4f28-a47e-352a1e958e12" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/registro.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab10_20190923_20175557_20186137/Beans/BEspecialidad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab10_20190923_20175557_20186137/Beans/BEspecialidad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab10_20190923_20175557_20186137/Daos/userDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab10_20190923_20175557_20186137/Daos/userDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab10_20190923_20175557_20186137/Servlet/loginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab10_20190923_20175557_20186137/Servlet/loginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab10_20190923_20175557_20186137/Servlet/viajesServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab10_20190923_20175557_20186137/Servlet/viajesServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/PaginaPrincipal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PaginaPrincipal.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/registro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registro.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -169,7 +169,7 @@
       <updated>1656374850668</updated>
       <workItem from="1656374851963" duration="4115000" />
       <workItem from="1656420235239" duration="9526000" />
-      <workItem from="1656431180493" duration="3273000" />
+      <workItem from="1656431180493" duration="10767000" />
     </task>
     <servers />
   </component>

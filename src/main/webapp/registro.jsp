@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.example.lab10_20190923_20175557_20186137.Beans.BEspecialidad" %><%--
   Created by IntelliJ IDEA.
   User: Jon
   Date: 28/06/2022
@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<jsp:useBean id="listaEspecialidades" type="java.util.ArrayList<com.example.lab10_20190923_20175557_20186137.Beans.BEspecialidad>" scope="request"/>
 <html>
   <head>
 
@@ -50,31 +51,38 @@
           <img class="mb-4 mt-4" src="Inicio_Sesion/logo.png" alt=" " width="230" height="230">
           <p class="text-center" style="color: aliceblue; font-size: 25px" ><b>Registro</b></p>
 
-          <form method="post" action="<%=request.getContextPath()%>/loginServlet?action=">
+          <form method="post" action="<%=request.getContextPath()%>/loginServlet?action=crearUser">
 
             <div class="mb-3 mt-3 ms-4 me-4">
-              <input type="text" class="form-control form-control-user" placeholder="Nombre">
+              <input name="nombre" required="required" type="text" class="form-control form-control-user" placeholder="Nombre">
             </div>
             <div class="mb-3 mt-3 ms-4 me-4">
-              <input type="text" class="form-control form-control-user" placeholder="Apellido">
+              <input name="apellido" required="required" type="text" class="form-control form-control-user" placeholder="Apellido">
             </div>
             <div class="mb-3 mt-3 ms-4 me-4">
-              <input type="number" min="18" max="29" class="form-control" placeholder="Edad">
+              <input name="edad" required="required" type="number" min="18" max="29" class="form-control" placeholder="Edad">
             </div>
             <div class="mb-3 mt-3 ms-4 me-4">
-              <input type="text" class="form-control form-control-user" placeholder="Codigo PUCP">
+              <input name="codigo" required="required" type="number" minlength="8" maxlength="8" class="form-control form-control-user" placeholder="Codigo PUCP">
             </div>
             <div class="mb-3 mt-3 ms-4 me-4">
-              <input type="email" class="form-control form-control-user" placeholder="Correo PUCP">
+              <input name="correo" required="required" type="email" class="form-control form-control-user" placeholder="Correo PUCP">
             </div>
             <div class="mb-3 mt-3 ms-4 me-4">
-              <input type="email" class="form-control form-control-user" placeholder="Especialidad">
+              <select name="especialidad" class="form-select" id="inputGroupSelect01">
+                <%for (BEspecialidad e : listaEspecialidades){%>
+                <option value="<%=e.getIdEspecialidad()%>"><%=e.getEspecialidad()%></option>
+                <%}%>
+              </select>
             </div>
             <div class="mb-3 mt-3 ms-4 me-4">
-              <input type="password" class="form-control" placeholder="Contraseña">
+              <hr>
             </div>
             <div class="mb-3 mt-3 ms-4 me-4">
-              <input type="password" class="form-control" placeholder="Contraseña">
+              <input name="contra" required="required" type="password" class="form-control" placeholder="Contraseña">
+            </div>
+            <div class="mb-3 mt-3 ms-4 me-4">
+              <input required="required" type="password" class="form-control" placeholder="Repetir Contraseña">
             </div>
 
 
