@@ -1,7 +1,9 @@
 package com.example.lab10_20190923_20175557_20186137.Daos;
 
+import com.example.lab10_20190923_20175557_20186137.Beans.BCostociudad;
 import com.example.lab10_20190923_20175557_20186137.Beans.BUsuario;
 import com.example.lab10_20190923_20175557_20186137.Beans.BViaje;
+import com.example.lab10_20190923_20175557_20186137.Beans.Bseguro;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -81,6 +83,45 @@ public class empresaDaos extends BaseDao{
     private static String sql_crearViaje="insert into viaje (usuario_codigopucp,fecha_reserva, fecha_viaje, cantidad_tickets, idcostosciudad, \n" +
             "seguro_idseguro)\n" +
             "values (?,now(), ?, ?,?,?);";
+
+    public ArrayList<Bseguro> listadoSeguros(Bseguro bseguro){
+        ArrayList<Bseguro> listaSeguros = new ArrayList<>();
+        try {
+            String sql = "select seguro from seguro;";
+            Connection conn = this.getConnection();
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()){
+                Bseguro se = new Bseguro();
+                se.setSeguro(rs.getString(1));
+
+                listaSeguros.add(se);
+            }
+        } catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+        return listaSeguros;
+    }
+    public ArrayList<BCostociudad> listadoCostos(BCostociudad costociudad){
+        ArrayList<BCostociudad> listaCostos = new ArrayList<>();
+        try {
+            String sql = "select concat(ci.ciudad, '-> ',ciu.ciudad) as \"pasajes\",  co.costo as \"costo\" from costosciudad co\n" +
+                    "inner join ciudad ci on (co.idciudad_origen = ci.idciudad)\n" +
+                    "inner join ciudad ciu on (co.idciudad_destino = ciu.idciudad)";
+            Connection conn = this.getConnection();
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()){
+                BCostociudad co = new BCostociudad();
+                co.setDestinatarios(rs.getString(1));
+                co.setCosto(rs.getDouble(2));
+                listaCostos.add(co);
+            }
+        } catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+        return listaCostos;
+    }
     public void crearViaje(BViaje viaje){
         try (Connection conn = this.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql_crearViaje)

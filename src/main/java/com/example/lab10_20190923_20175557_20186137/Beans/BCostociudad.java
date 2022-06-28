@@ -37,4 +37,7 @@ public class BCostociudad {
     public void setCosto(double costo) {
         this.costo = costo;
     }
+
+    public void setDestinatarios(String string) {
+    }
 }
