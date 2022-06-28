@@ -1,21 +1,20 @@
 package com.example.lab10_20190923_20175557_20186137.Beans;
 
 public class BUsuario {
-    private int userId;
+    private String codigoPucp;
     private String nombre;
     private String apellido;
-    private int codigoPucp;
     private String correoPucp;
     private String especialidad;
-    private String Contraseña;
-    private String confirmacionContraseña;
+    private String password;
+    private String password_hashed;
 
-    public int getUserId() {
-        return userId;
+    public String getCodigoPucp() {
+        return codigoPucp;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setCodigoPucp(String codigoPucp) {
+        this.codigoPucp = codigoPucp;
     }
 
     public String getNombre() {
@@ -34,14 +33,6 @@ public class BUsuario {
         this.apellido = apellido;
     }
 
-    public int getCodigoPucp() {
-        return codigoPucp;
-    }
-
-    public void setCodigoPucp(int codigoPucp) {
-        this.codigoPucp = codigoPucp;
-    }
-
     public String getCorreoPucp() {
         return correoPucp;
     }
@@ -58,19 +49,19 @@ public class BUsuario {
         this.especialidad = especialidad;
     }
 
-    public String getContraseña() {
-        return Contraseña;
+    public String getPassword() {
+        return password;
     }
 
-    public void setContraseña(String contraseña) {
-        Contraseña = contraseña;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getConfirmacionContraseña() {
-        return confirmacionContraseña;
+    public String getPassword_hashed() {
+        return password_hashed;
     }
 
-    public void setConfirmacionContraseña(String confirmacionContraseña) {
-        this.confirmacionContraseña = confirmacionContraseña;
+    public void setPassword_hashed(String password_hashed) {
+        this.password_hashed = password_hashed;
     }
 }
