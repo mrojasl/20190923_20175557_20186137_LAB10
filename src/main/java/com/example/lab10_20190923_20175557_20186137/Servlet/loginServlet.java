@@ -20,6 +20,10 @@ public class loginServlet extends HttpServlet {
                 requestDispatcher= request.getRequestDispatcher("index.jsp");
                 requestDispatcher.forward(request,response);
                 break;
+            case "registro":
+                requestDispatcher= request.getRequestDispatcher("registro.jsp");
+                requestDispatcher.forward(request,response);
+                break;
         }
 
     }

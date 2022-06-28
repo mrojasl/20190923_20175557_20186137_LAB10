@@ -5,8 +5,6 @@
   Time: 08:55 a. m.
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page import="Beans.BViaje" %>
-<%@ page import="Beans.BCostociudad" %>
 <%@ page import="com.example.lab10_20190923_20175557_20186137.Beans.BViaje" %>
 <%@ page import="com.example.lab10_20190923_20175557_20186137.Beans.BCostociudad" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -59,7 +57,7 @@
                     </table>
                 </div>
             </div>
-            <jsp:include page="/static/scripts.jsp"/>
+
         </body>
     </html>
 </html>

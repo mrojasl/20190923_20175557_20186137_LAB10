@@ -44,7 +44,7 @@
 </head>
 <body background ="Inicio_Sesion/fondo.jpg")>
     <div class="modal-fullscreen-sm-down text-center w-75 mt-5 rounded align-content-center ">
-        <div class="col-sm-14" style="background-color: black" >
+        <div class="col-sm-14" style="background-color: black;margin-left: 500px" >
                 <div class="mb-3">
 
                     <img class="mb-4 mt-4" src="Inicio_Sesion/logo.png" alt=" " width="230" height="230">
@@ -70,7 +70,7 @@
                     </form>
 
                     <div class="mb-1">
-                        <span><a href="#" style="color: red">Soy nuevo y quiero registrarme</a></span>
+                        <span><a href="<%=request.getContextPath()%>/loginServlet?action=registro" style="color: red">Soy nuevo y quiero registrarme</a></span>
                     </div>
                     <div>
                         <br>
