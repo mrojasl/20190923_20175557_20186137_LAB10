@@ -1,4 +1,4 @@
-package Beans;
+package com.example.lab10_20190923_20175557_20186137.Beans;
 
 public class BUsuario {
     private int userId;
