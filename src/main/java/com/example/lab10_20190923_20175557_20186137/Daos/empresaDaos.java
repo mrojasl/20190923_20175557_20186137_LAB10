@@ -59,4 +59,21 @@ public class empresaDaos extends BaseDao{
             error.printStackTrace();
         }
     }
+    private static String sql_loguin="select * from usuario where codigopucp=? and password=?;";
+    public  boolean loguear(BUsuario usuario) {
+        boolean result = false;
+        try (Connection conn = this.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql_loguin)
+        ) {
+            pstmt.setString(1, usuario.getCodigoPucp());
+            pstmt.setString(2, usuario.getPassword());
+            ResultSet rs=pstmt.executeQuery();
+            result=rs.next();
+
+        } catch (SQLException error) {
+            error.printStackTrace();
+        }
+
+        return result;
+    }
 }

@@ -26,6 +26,10 @@ public class BUsuario {
         this.status = status;
     }
 
+    public BUsuario(String codigo, String contraseña) {
+
+    }
+
     public int getIdespecialidad() {
         return idespecialidad;
     }
