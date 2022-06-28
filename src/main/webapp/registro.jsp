@@ -63,7 +63,7 @@
               <input name="edad" required="required" type="number" min="18" max="29" class="form-control" placeholder="Edad">
             </div>
             <div class="mb-3 mt-3 ms-4 me-4">
-              <input name="codigo" required="required" type="number" minlength="8" maxlength="8" class="form-control form-control-user" placeholder="Codigo PUCP">
+              <input name="codigo" required="required" type="number" min="10000000" max="99999999" class="form-control form-control-user" placeholder="Codigo PUCP">
             </div>
             <div class="mb-3 mt-3 ms-4 me-4">
               <input name="correo" required="required" type="email" class="form-control form-control-user" placeholder="Correo PUCP">
@@ -79,15 +79,19 @@
               <hr>
             </div>
             <div class="mb-3 mt-3 ms-4 me-4">
-              <input name="contra" required="required" type="password" class="form-control" placeholder="Contraseña">
+              <input id="password1" oninput="validarPassword(this.value)" name="contra" required="required" type="password" class="form-control" placeholder="Contraseña">
             </div>
             <div class="mb-3 mt-3 ms-4 me-4">
-              <input required="required" type="password" class="form-control" placeholder="Repetir Contraseña">
+              <input oninput="matchPassword(this.value)" required="required" type="password" class="form-control" placeholder="Repetir Contraseña">
             </div>
+
+            <div id="mensajePasswordMala" class="text-danger mb-2">La contraseña debe contener mayúsculas, números y carácteres especiales. (8 dígitos mín.)</div>
+            <div id="mensajePasswordNoMatch" class="text-danger mb-2">Las contraseñas deben coincidir.</div>
+
 
 
             <div class="mb-3 mt-4">
-              <button type="submit" class="btn btn-primary btn-user btn-block">
+              <button disabled id="registerButton" type="submit" class="btn btn-primary btn-user btn-block">
                 Registrar
               </button>
             </div>
@@ -103,7 +107,53 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
+    <script>
+      let booleanValid;
+      let booleanMatch;
+      function validarPassword(password){
+        let strongPassword = new RegExp('^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$');
+        let label = document.getElementById("mensajePasswordMala");
+        if (strongPassword.test(password)){
+          console.log("bien");
+          label.style.display = "none";
 
+          booleanValid = false;
+          disableButton(booleanValid);
+
+        } else {
+          console.log("mal");
+          label.style.display = "block";
+          booleanValid = true;
+          disableButton(booleanValid);
+
+
+        }
+      }
+      function matchPassword(password){
+        let passwd = document.getElementById("password1");
+        let label = document.getElementById("mensajePasswordNoMatch");
+
+        if (passwd.value===password){
+          console.log("iguales");
+          label.style.display = "none";
+
+          booleanMatch = false;
+          disableButton(booleanMatch);
+
+        } else {
+          console.log("diferentes");
+          label.style.display = "block";
+
+          booleanMatch = true;
+          disableButton(booleanMatch);
+
+        }
+      }
+      function disableButton(x){
+        document.getElementById("registerButton").disabled=x;
+      }
+    </script>
 
   </body>
 </html>
+
