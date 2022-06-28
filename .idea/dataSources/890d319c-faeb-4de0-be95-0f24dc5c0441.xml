@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="lab10@localhost">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.38">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.39">
     <root id="1">
       <DefaultCasing>lower/lower</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -945,24 +945,24 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <collation id="273" parent="1" name="utf8mb4_zh_0900_as_cs">
       <Charset>utf8mb4</Charset>
     </collation>
-    <schema id="274" parent="1" name="apoca_z">
+    <schema id="274" parent="1" name="hr">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="275" parent="1" name="hr">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="276" parent="1" name="information_schema">
+    <schema id="275" parent="1" name="information_schema">
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <schema id="277" parent="1" name="lab10">
+    <schema id="276" parent="1" name="lab10">
       <Current>1</Current>
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <schema id="278" parent="1" name="lab6sw1">
+    <schema id="277" parent="1" name="lab6sw1">
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <schema id="279" parent="1" name="lab9_zombies">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    <schema id="278" parent="1" name="lab9_zombies">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="279" parent="1" name="mydb">
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="280" parent="1" name="mysql">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
@@ -998,27 +998,27 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <table id="289" parent="277" name="ciudad">
+    <table id="289" parent="276" name="ciudad">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <table id="290" parent="277" name="costosciudad">
+    <table id="290" parent="276" name="costosciudad">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <table id="291" parent="277" name="especialidad">
+    <table id="291" parent="276" name="especialidad">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <table id="292" parent="277" name="seguro">
+    <table id="292" parent="276" name="seguro">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <table id="293" parent="277" name="usuario">
+    <table id="293" parent="276" name="usuario">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <table id="294" parent="277" name="viaje">
+    <table id="294" parent="276" name="viaje">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>

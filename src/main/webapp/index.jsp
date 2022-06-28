@@ -58,6 +58,9 @@
                         <div class="mb-3 mt-3 ms-4 me-4">
                             <input type="text" class="form-control" placeholder="Contraseña">
                         </div>
+                        <% if (request.getParameter("error") != null) { %>
+                        <div class="text-danger mb-2">Error en usuario o contraseña</div>
+                        <%}%>
                         <div class="mb-3 mt-4">
                             <button type="submit" class="btn btn-primary btn-user btn-block">
                                 Ingresar

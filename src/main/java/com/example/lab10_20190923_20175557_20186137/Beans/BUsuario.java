@@ -4,10 +4,31 @@ public class BUsuario {
     private String codigoPucp;
     private String nombre;
     private String apellido;
+    private int edad;
     private String correoPucp;
     private int idespecialidad;
     private String password;
-    private String password_hashed;
+    private String status;
+
+    public BUsuario() {
+
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     public BUsuario(String codigo, String contraseña) {
 
@@ -62,11 +83,4 @@ public class BUsuario {
         this.password = password;
     }
 
-    public String getPassword_hashed() {
-        return password_hashed;
-    }
-
-    public void setPassword_hashed(String password_hashed) {
-        this.password_hashed = password_hashed;
-    }
 }
