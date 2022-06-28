@@ -19,6 +19,15 @@ public class viajesServlet extends HttpServlet {
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
+        switch (action){
+            case "crearUser" ->{
+                BUsuario usuario = leerParametrosRequest(request);
+                break;
+            }
+            case "loguin"->{
+
+            }
+        }
         /*-- switch (action){
             case "loguearse" ->{
                 BUsuario usuario = leerParametrosRequest(request);
@@ -38,13 +47,13 @@ public class viajesServlet extends HttpServlet {
 
         }*/
     }
-    /*public BUsuario leerParametrosRequest(HttpServletRequest request) throws IOException, ServletException {
+    public BUsuario leerParametrosRequest(HttpServletRequest request) throws IOException, ServletException {
         String codigo = request.getParameter("codigo");
         String contraseña = request.getParameter("password");
 
-        System.out.println(codigo +contraseña);
+        
 
         return new BUsuario(codigo ,contraseña);
-    }*/
+    }
 
 }

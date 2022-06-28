@@ -9,6 +9,10 @@ public class BUsuario {
     private String password;
     private String password_hashed;
 
+    public BUsuario(String codigo, String contraseña) {
+
+    }
+
     public int getIdespecialidad() {
         return idespecialidad;
     }
