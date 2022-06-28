@@ -1,4 +1,4 @@
-<%@ page import="com.example.lab10_20190923_20175557_20186137.Beans.BEspecialidad" %><%--
+%@ page import="com.example.lab10_20190923_20175557_20186137.Beans.BEspecialidad" %><%--
   Created by IntelliJ IDEA.
   User: Jon
   Date: 28/06/2022

@@ -9,7 +9,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class empresaDaos extends BaseDao{
-    public ArrayList<BViaje> listadoViaje(BUsuario codigo){
+    public ArrayList<BViaje> listadoViaje(String codigo){
         ArrayList<BViaje> listaViaje = new ArrayList<>();
         try {
             String sql = "select  v.idviaje as \"idviaje\", v.fecha_reserva, v.fecha_viaje, ciu.ciudad as \"ciudad de origen\",\n" +
@@ -23,7 +23,6 @@ public class empresaDaos extends BaseDao{
             Connection conn = this.getConnection();
             PreparedStatement pstmt = conn.prepareStatement(sql);
             ResultSet rs = pstmt.executeQuery();
-            pstmt.setString(1, codigo.getCodigoPucp());
             while (rs.next()){
                 BViaje vi = new BViaje();
                 vi.setIdviaje(rs.getInt(1));
@@ -84,7 +83,7 @@ public class empresaDaos extends BaseDao{
             "seguro_idseguro)\n" +
             "values (?,now(), ?, ?,?,?);";
 
-    public ArrayList<Bseguro> listadoSeguros(Bseguro bseguro){
+    public ArrayList<Bseguro> listadoSeguros(){
         ArrayList<Bseguro> listaSeguros = new ArrayList<>();
         try {
             String sql = "select seguro from seguro;";
@@ -102,7 +101,7 @@ public class empresaDaos extends BaseDao{
         }
         return listaSeguros;
     }
-    public ArrayList<BCostociudad> listadoCostos(BCostociudad costociudad){
+    public ArrayList<BCostociudad> listadoCostos(){
         ArrayList<BCostociudad> listaCostos = new ArrayList<>();
         try {
             String sql = "select concat(ci.ciudad, '-> ',ciu.ciudad) as \"pasajes\",  co.costo as \"costo\" from costosciudad co\n" +
