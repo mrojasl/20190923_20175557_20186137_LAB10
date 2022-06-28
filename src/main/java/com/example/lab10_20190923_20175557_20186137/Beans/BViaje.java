@@ -64,4 +64,10 @@ public class BViaje {
     public void setCantidad_tickets(int cantidad_tickets) {
         this.cantidad_tickets = cantidad_tickets;
     }
+
+    public void setIdciudad(String string) {
+    }
+
+    public void setCostoTotal(float aFloat) {
+    }
 }
