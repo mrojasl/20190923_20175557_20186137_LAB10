@@ -9,27 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="a42935e4-4829-4f28-a47e-352a1e958e12" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab10_20190923_20175557_20186137/Servlet/viajesServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Beans/BUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab10_20190923_20175557_20186137/Beans/BUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-    </list>
-=======
     <list default="true" id="a42935e4-4829-4f28-a47e-352a1e958e12" name="Changes" comment="" />
->>>>>>> 9cc38ccbfe7a1839ab610aeac55e0183b8e2f021
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,15 +40,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-<<<<<<< HEAD
-    "last_opened_file_path": "C:/Users/caleb/IdeaProjects/20190923_20175557_20186137_LAB10/src/main/webapp/Inicio_Sesion",
-=======
     "last_opened_file_path": "D:/Resources/java/LAB10_20190923_20175557_20186137/database",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
->>>>>>> 9cc38ccbfe7a1839ab610aeac55e0183b8e2f021
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
@@ -169,12 +149,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656374850668</updated>
-<<<<<<< HEAD
-      <workItem from="1656374851963" duration="1000" />
-      <workItem from="1656375203515" duration="4476000" />
-=======
-      <workItem from="1656374851963" duration="2412000" />
->>>>>>> 9cc38ccbfe7a1839ab610aeac55e0183b8e2f021
+      <workItem from="1656374851963" duration="4115000" />
     </task>
     <servers />
   </component>
