@@ -2,9 +2,36 @@ package com.example.lab10_20190923_20175557_20186137.Beans;
 
 public class BViaje {
     private int idviaje;
+    private String codido_pucp;
     private String fecha_reserva;
     private String fecha_viaje;
     private int cantidad_tickets;
+    private int idcostos_ciudad;
+    private int idseguro;
+
+    public String getCodido_pucp() {
+        return codido_pucp;
+    }
+
+    public void setCodido_pucp(String codido_pucp) {
+        this.codido_pucp = codido_pucp;
+    }
+
+    public int getIdcostos_ciudad() {
+        return idcostos_ciudad;
+    }
+
+    public void setIdcostos_ciudad(int idcostos_ciudad) {
+        this.idcostos_ciudad = idcostos_ciudad;
+    }
+
+    public int getIdseguro() {
+        return idseguro;
+    }
+
+    public void setIdseguro(int idseguro) {
+        this.idseguro = idseguro;
+    }
 
     public int getIdviaje() {
         return idviaje;
