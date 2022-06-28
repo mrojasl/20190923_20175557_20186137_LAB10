@@ -1,5 +1,6 @@
 package com.example.lab10_20190923_20175557_20186137.Daos;
 
+import com.example.lab10_20190923_20175557_20186137.Beans.BUsuario;
 import com.example.lab10_20190923_20175557_20186137.Beans.BViaje;
 
 import java.sql.*;
@@ -39,5 +40,23 @@ public class empresaDaos extends BaseDao{
 
 
         return listaViaje;
+    }
+    private static String sql_crear="insert into usuario (codigopucp,nombre,apellido,correopucp,idespecialidad,password) values \n" +
+            "(?,?,?,?,?,?);";
+    public void crearUsuario(BUsuario usuario){
+        try (Connection conn = this.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql_crear)
+        ) {
+            pstmt.setString(1, usuario.getCodigoPucp());
+            pstmt.setString(2, usuario.getNombre());
+            pstmt.setString(3, usuario.getApellido());
+            pstmt.setString(4, usuario.getCorreoPucp());
+            pstmt.setInt(5, usuario.getIdespecialidad());
+            pstmt.setString(6, usuario.getPassword());
+
+            pstmt.executeUpdate();
+        } catch (SQLException error) {
+            error.printStackTrace();
+        }
     }
 }

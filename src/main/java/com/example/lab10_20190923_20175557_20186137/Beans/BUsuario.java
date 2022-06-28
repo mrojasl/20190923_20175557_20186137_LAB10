@@ -5,9 +5,17 @@ public class BUsuario {
     private String nombre;
     private String apellido;
     private String correoPucp;
-    private String especialidad;
+    private int idespecialidad;
     private String password;
     private String password_hashed;
+
+    public int getIdespecialidad() {
+        return idespecialidad;
+    }
+
+    public void setIdespecialidad(int idespecialidad) {
+        this.idespecialidad = idespecialidad;
+    }
 
     public String getCodigoPucp() {
         return codigoPucp;
@@ -41,13 +49,6 @@ public class BUsuario {
         this.correoPucp = correoPucp;
     }
 
-    public String getEspecialidad() {
-        return especialidad;
-    }
-
-    public void setEspecialidad(String especialidad) {
-        this.especialidad = especialidad;
-    }
 
     public String getPassword() {
         return password;
