@@ -10,6 +10,10 @@ public class BUsuario {
     private String password;
     private String status;
 
+    public BUsuario() {
+
+    }
+
     public int getEdad() {
         return edad;
     }
