@@ -1,7 +1,7 @@
 package Beans;
 
 public class BUsuario {
-    private int codigoPucp;
+    private String codigoPucp;
     private String nombre;
     private String apellido;
     private String correoPucp;
@@ -9,11 +9,11 @@ public class BUsuario {
     private String password;
     private String password_hashed;
 
-    public int getCodigoPucp() {
+    public String getCodigoPucp() {
         return codigoPucp;
     }
 
-    public void setCodigoPucp(int codigoPucp) {
+    public void setCodigoPucp(String codigoPucp) {
         this.codigoPucp = codigoPucp;
     }
 
