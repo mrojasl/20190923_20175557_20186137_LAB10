@@ -12,13 +12,13 @@ public class empresaDaos extends BaseDao{
     public ArrayList<BViaje> listadoViaje(String codigo){
         ArrayList<BViaje> listaViaje = new ArrayList<>();
         String sql = "select  v.idviaje as \"idviaje\", v.fecha_reserva, v.fecha_viaje, ciu.ciudad as \"ciudad de origen\",\n" +
-                "ci.ciudad as \"ciudad de destino\", se.seguro, v.cantidad_tickets as \"numero boletos\",\n" +
+                "ci.ciudad as \"ciudad de destino\", se.idseguro, v.cantidad_tickets as \"numero boletos\",\n" +
                 "round(v.cantidad_tickets*co.costo) as \"costo total\"\n" +
                 "from viaje v inner join seguro se on (v.seguro_idseguro=se.idseguro)\n" +
                 "inner join costosciudad co on (co.idcostosciudad=v.idcostosciudad)\n" +
                 "inner join ciudad ciu on (ciu.idciudad = co.idciudad_origen)\n" +
                 "inner join ciudad ci on (ci.idciudad = co.idciudad_destino)\n" +
-                "where v.usuario_codigopucp = ?;";
+                "where v.usuario_codigopucp = ?";
 
         try (Connection conn = this.getConnection();
             PreparedStatement pstmt = conn.prepareStatement(sql);){
