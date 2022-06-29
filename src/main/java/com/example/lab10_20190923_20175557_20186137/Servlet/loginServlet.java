@@ -2,6 +2,7 @@ package com.example.lab10_20190923_20175557_20186137.Servlet;
 
 import com.example.lab10_20190923_20175557_20186137.Beans.BUsuario;
 import com.example.lab10_20190923_20175557_20186137.Daos.userDao;
+import com.mysql.cj.protocol.x.Notice;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -16,12 +17,21 @@ public class loginServlet extends HttpServlet {
         String action= request.getParameter("action")==null ? "index": request.getParameter("action");
         RequestDispatcher requestDispatcher;
         userDao u = new userDao();
+        HttpSession session = request.getSession();
 
         switch (action){
             case "index":
-                requestDispatcher= request.getRequestDispatcher("index.jsp");
-                requestDispatcher.forward(request,response);
+                BUsuario bUsuario = (BUsuario) session.getAttribute("UsuarioLogueado");
+                if(bUsuario != null && Integer.parseInt(bUsuario.getCodigoPucp()) != 0){
+                    response.sendRedirect(request.getContextPath() + "/viajesServlet");
+                } else {
+                    requestDispatcher= request.getRequestDispatcher("index.jsp");
+                    requestDispatcher.forward(request,response);
+                }
                 break;
+            case "logout":
+                session.invalidate();
+                response.sendRedirect(request.getContextPath()+"/index.jsp");
             case "registro":
                 request.setAttribute("listaEspecialidades", u.listarEspecialidad());
                 requestDispatcher= request.getRequestDispatcher("registro.jsp");

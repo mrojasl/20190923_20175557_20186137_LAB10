@@ -53,10 +53,10 @@
                     <form method="post" action="<%=request.getContextPath()%>/loginServlet?action=login">
 
                         <div class="mb-3 mt-3 ms-4 me-4">
-                            <input type="text" class="form-control form-control-user" placeholder="Usuario">
+                            <input name="email" type="text" class="form-control form-control-user" placeholder="Correo PUCP">
                         </div>
                         <div class="mb-3 mt-3 ms-4 me-4">
-                            <input type="text" class="form-control" placeholder="Contraseña">
+                            <input name="password" type="password" class="form-control" placeholder="Contraseña">
                         </div>
                         <% if (request.getParameter("error") != null) { %>
                         <div class="text-danger mb-2">Error en usuario o contraseña</div>
