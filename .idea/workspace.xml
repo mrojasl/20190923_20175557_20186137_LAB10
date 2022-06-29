@@ -10,125 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a42935e4-4829-4f28-a47e-352a1e958e12" name="Changes" comment="">
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/890d319c-faeb-4de0-be95-0f24dc5c0441.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/890d319c-faeb-4de0-be95-0f24dc5c0441.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f94b11d1-5b22-4b08-b8f8-a8c4e9a45108.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f94b11d1-5b22-4b08-b8f8-a8c4e9a45108.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_06_2022_07_44__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_06_2022_07_44__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/ayacucho.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/balloon.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/beach.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-grid.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-reboot.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-utilities.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-utilities.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-utilities.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-utilities.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-utilities.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/css/bootstrap.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/js/bootstrap.esm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/js/bootstrap.esm.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/js/bootstrap.esm.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/js/bootstrap.esm.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/bootstrap-5.1.3-dist/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/brasil.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/cerdeńa.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/china.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/css/sb-admin-2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/css/sb-admin-2.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/inicio_sesion.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/iquitos.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/js/demo/chart-area-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/js/demo/chart-bar-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/js/demo/chart-pie-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/js/demo/datatables-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/js/sb-admin-2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/js/sb-admin-2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/login-ejemplo-vista.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/mountain.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/pagina_principal.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/pucallpa.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/_cards.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/_charts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/_dropdowns.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/_error.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/_footer.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/_global.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/_login.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/_navs.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/_utilities.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/navs/_global.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/navs/_sidebar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/navs/_topbar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/sb-admin-2.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/utilities/_animation.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/utilities/_background.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/utilities/_border.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/utilities/_display.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/utilities/_progress.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/utilities/_rotate.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/scss/utilities/_text.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/tarapoto.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/texto - login - terminos y condiciones.rtf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/texto - menu principal .rtf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/tokio.jpeg" beforeDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab10_20190923_20175557_20186137/Daos/empresaDaos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab10_20190923_20175557_20186137/Daos/empresaDaos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab10_20190923_20175557_20186137/Servlet/loginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab10_20190923_20175557_20186137/Servlet/loginServlet.java" afterDir="false" />
->>>>>>> 8332f5b2bea5afa534180f4cc9eb2518df97125f
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cabecera.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="HTML File" />
-        <option value="Jsp File" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -137,54 +25,21 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2BBM6UBi1PldMgmrX7MmHiABJVv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/caleb/IdeaProjects/20190923_20175557_20186137_LAB10/src/main/webapp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
-  }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\caleb\IdeaProjects\20190923_20175557_20186137_LAB10\src\main\webapp" />
-      <recent name="C:\Users\caleb\IdeaProjects\20190923_20175557_20186137_LAB10\HTML_base" />
-      <recent name="D:\Resources\java\LAB10_20190923_20175557_20186137\database" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\caleb\IdeaProjects\20190923_20175557_20186137_LAB10\HTML_base\header_principal" />
-      <recent name="C:\Users\caleb\IdeaProjects\20190923_20175557_20186137_LAB10\HTML_base\Inicio_Sesion" />
-      <recent name="C:\Users\caleb\IdeaProjects\20190923_20175557_20186137_LAB10\HTML_base" />
-      <recent name="D:\Resources\java\LAB10_20190923_20175557_20186137\src\main\webapp" />
-    </key>
-  </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.63" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.63" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 9.0.631" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.631" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="LAB10_20190923_20175557_20186137:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/LAB10" />
+            <option name="CONTEXT_PATH" value="/LAB10_20190923_20175557_20186137_war_exploded" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="0dbecebf-5802-4963-9086-8244c01fc410" />
+        <option name="BASE_DIRECTORY_NAME" value="ad79690e-d3bc-46c3-b305-03e48329d594" />
+        <option name="HTTP_PORT" value="8084" />
+        <option name="JNDI_PORT" value="1116" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -192,7 +47,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="52930" />
+        <option name="DEBUG_PORT" value="49276" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -262,28 +117,8 @@
       </method>
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="a42935e4-4829-4f28-a47e-352a1e958e12" name="Changes" comment="" />
-      <created>1656374850668</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1656374850668</updated>
-      <workItem from="1656374851963" duration="4115000" />
-      <workItem from="1656420235239" duration="9526000" />
-      <workItem from="1656431180493" duration="19213000" />
-<<<<<<< HEAD
-      <workItem from="1656522374288" duration="891000" />
-      <workItem from="1656524640593" duration="7775000" />
-=======
-      <workItem from="1656522374288" duration="5255000" />
->>>>>>> 8332f5b2bea5afa534180f4cc9eb2518df97125f
-    </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -295,16 +130,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/lab10_20190923_20175557_20186137/Daos/empresaDaos.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
