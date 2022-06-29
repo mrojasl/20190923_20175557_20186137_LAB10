@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a42935e4-4829-4f28-a47e-352a1e958e12" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/890d319c-faeb-4de0-be95-0f24dc5c0441.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/890d319c-faeb-4de0-be95-0f24dc5c0441.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f94b11d1-5b22-4b08-b8f8-a8c4e9a45108.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f94b11d1-5b22-4b08-b8f8-a8c4e9a45108.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_06_2022_07_44__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_06_2022_07_44__Changes_.xml" afterDir="false" />
@@ -106,6 +107,11 @@
       <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/texto - login - terminos y condiciones.rtf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/texto - menu principal .rtf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML_base/lab4_parte1_base/tokio.jpeg" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab10_20190923_20175557_20186137/Daos/empresaDaos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab10_20190923_20175557_20186137/Daos/empresaDaos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab10_20190923_20175557_20186137/Servlet/loginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab10_20190923_20175557_20186137/Servlet/loginServlet.java" afterDir="false" />
+>>>>>>> 8332f5b2bea5afa534180f4cc9eb2518df97125f
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,8 +273,12 @@
       <workItem from="1656374851963" duration="4115000" />
       <workItem from="1656420235239" duration="9526000" />
       <workItem from="1656431180493" duration="19213000" />
+<<<<<<< HEAD
       <workItem from="1656522374288" duration="891000" />
       <workItem from="1656524640593" duration="7775000" />
+=======
+      <workItem from="1656522374288" duration="5255000" />
+>>>>>>> 8332f5b2bea5afa534180f4cc9eb2518df97125f
     </task>
     <servers />
   </component>
@@ -285,5 +295,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/lab10_20190923_20175557_20186137/Daos/empresaDaos.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

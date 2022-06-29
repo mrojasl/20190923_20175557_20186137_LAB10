@@ -1,7 +1,9 @@
 package com.example.lab10_20190923_20175557_20186137.Servlet;
 
 import com.example.lab10_20190923_20175557_20186137.Beans.BUsuario;
+import com.example.lab10_20190923_20175557_20186137.Daos.empresaDaos;
 import com.example.lab10_20190923_20175557_20186137.Daos.userDao;
+import com.mysql.cj.protocol.x.Notice;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -16,12 +18,21 @@ public class loginServlet extends HttpServlet {
         String action= request.getParameter("action")==null ? "index": request.getParameter("action");
         RequestDispatcher requestDispatcher;
         userDao u = new userDao();
+        HttpSession session = request.getSession();
 
         switch (action){
             case "index":
-                requestDispatcher= request.getRequestDispatcher("index.jsp");
-                requestDispatcher.forward(request,response);
+                BUsuario bUsuario = (BUsuario) session.getAttribute("UsuarioLogueado");
+                if(bUsuario != null && Integer.parseInt(bUsuario.getCodigoPucp()) != 0){
+                    response.sendRedirect(request.getContextPath() + "/viajesServlet");
+                } else {
+                    requestDispatcher= request.getRequestDispatcher("index.jsp");
+                    requestDispatcher.forward(request,response);
+                }
                 break;
+            case "logout":
+                session.invalidate();
+                response.sendRedirect(request.getContextPath()+"/index.jsp");
             case "registro":
                 request.setAttribute("listaEspecialidades", u.listarEspecialidad());
                 requestDispatcher= request.getRequestDispatcher("registro.jsp");
@@ -36,13 +47,14 @@ public class loginServlet extends HttpServlet {
         RequestDispatcher requestDispatcher;
         String action= request.getParameter("action");
         userDao u = new userDao();
-
+        empresaDaos empresaDaos = new empresaDaos();
         switch (action){
             case "login":
                 userDao userDao = new userDao();
 
                 String emailInput = request.getParameter("email");
                 String passwordInput = request.getParameter("password");
+                RequestDispatcher view;
 
                 BUsuario bUsuario = userDao.validarUsuarioPassword(emailInput,passwordInput);
                 if (bUsuario != null){
@@ -50,7 +62,13 @@ public class loginServlet extends HttpServlet {
                     session.setAttribute("userLogueado",bUsuario);
                     session.setMaxInactiveInterval(60*10);
 
-                    response.sendRedirect(request.getContextPath() + "/viajesServlet");
+                    String codigo = userDao.obtenerCodigoPorCorreo(emailInput);
+                    request.setAttribute("codigopucp", codigo);
+
+                    request.setAttribute("listaViaje", empresaDaos.listadoViaje(codigo));
+                    view = request.getRequestDispatcher("PaginaPrincipal.jsp");
+                    view.forward(request, response);
+
                 } else {
                     response.sendRedirect(request.getContextPath() + "/loginServlet?error");
                 }
