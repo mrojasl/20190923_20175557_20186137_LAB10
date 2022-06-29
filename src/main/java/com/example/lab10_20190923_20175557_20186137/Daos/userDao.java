@@ -99,4 +99,25 @@ public class userDao extends BaseDao{
             error.printStackTrace();
         }
     }
+    public String obtenerCodigoPorCorreo(String correo){
+
+        String codigo = null;
+
+        String sql = "select codigopucp from usuario where correopucp=?";
+
+        try (Connection conn = this.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql);) {
+            pstmt.setString(1, correo);
+
+            try (ResultSet rs = pstmt.executeQuery();) {
+                while(rs.next()){
+                     codigo = rs.getString(1);
+                }
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return codigo;
+    }
 }

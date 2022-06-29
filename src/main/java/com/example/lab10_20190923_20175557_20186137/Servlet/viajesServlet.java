@@ -25,7 +25,7 @@ public class viajesServlet extends HttpServlet {
         RequestDispatcher view;
         switch (action){
             case "lista_viaje":
-                String codigopucp = request.getParameter("id_pucp");
+                String codigopucp = request.getParameter("codigopucp");
                 ArrayList<BViaje> usuario = empresaDaos.listadoViaje(codigopucp);
                 request.setAttribute("listaViaje", empresaDaos.listadoViaje(codigopucp));
                 view = request.getRequestDispatcher("employees/lista.jsp");

@@ -8,12 +8,11 @@
 <%@ page import="com.example.lab10_20190923_20175557_20186137.Beans.BViaje" %>
 <%@ page import="com.example.lab10_20190923_20175557_20186137.Beans.BCostociudad" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<jsp:useBean id="listaViaje" scope="request" type="java.util.ArrayList<com.example.lab10_20190923_20175557_20186137.Beans.BViaje>" />
 <html>
 
     <html>
-        <jsp:include page="cabecera.jsp">
-            <jsp:param name="title" value="Menu de humanos"/>
-        </jsp:include>
+
         <head>
             <link rel="shortcut icon" href="https://cdn-icons.flaticon.com/png/512/826/premium/826070.png?token=exp=1656523939~hmac=95e0835542059253ef913f926ef83145">
             <title>Pagina Principal</title>
@@ -22,7 +21,7 @@
 
             <h3>Buscador:</h3>
             <input class="form-control col-md-3 light-table-filter" data-table="order-table" type="text"
-                   placeholder="Search.."
+                   placeholder="Search..">
 
 
                 <div class="pb-5 pt-4 px-3 titlecolor">
@@ -123,7 +122,7 @@
                                             </div>
 
                                             <div class="form-outline mb-4">
-                                                <label class="form-label" for="seguro"
+                                                <label class="form-label"
                                                 >Empresa de Seguros</label
                                                 >
                                                 <select
@@ -159,7 +158,13 @@
 
                                             <br>
                                             <button type="submit" class="btn btn-tele">Añadir Viaje</button>
-
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
         </body>
     </html>
 </html>
