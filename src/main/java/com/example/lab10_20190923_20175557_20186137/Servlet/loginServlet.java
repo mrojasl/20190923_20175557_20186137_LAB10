@@ -1,6 +1,7 @@
 package com.example.lab10_20190923_20175557_20186137.Servlet;
 
 import com.example.lab10_20190923_20175557_20186137.Beans.BUsuario;
+import com.example.lab10_20190923_20175557_20186137.Daos.empresaDaos;
 import com.example.lab10_20190923_20175557_20186137.Daos.userDao;
 import com.mysql.cj.protocol.x.Notice;
 
@@ -46,13 +47,14 @@ public class loginServlet extends HttpServlet {
         RequestDispatcher requestDispatcher;
         String action= request.getParameter("action");
         userDao u = new userDao();
-
+        empresaDaos empresaDaos = new empresaDaos();
         switch (action){
             case "login":
                 userDao userDao = new userDao();
 
                 String emailInput = request.getParameter("email");
                 String passwordInput = request.getParameter("password");
+                RequestDispatcher view;
 
                 BUsuario bUsuario = userDao.validarUsuarioPassword(emailInput,passwordInput);
                 if (bUsuario != null){
@@ -60,7 +62,13 @@ public class loginServlet extends HttpServlet {
                     session.setAttribute("userLogueado",bUsuario);
                     session.setMaxInactiveInterval(60*10);
 
-                    response.sendRedirect(request.getContextPath() + "/viajesServlet");
+                    String codigo = userDao.obtenerCodigoPorCorreo(emailInput);
+                    request.setAttribute("codigopucp", codigo);
+
+                    request.setAttribute("listaViaje", empresaDaos.listadoViaje(codigo));
+                    view = request.getRequestDispatcher("employees/lista.jsp");
+                    view.forward(request, response);
+
                 } else {
                     response.sendRedirect(request.getContextPath() + "/loginServlet?error");
                 }
