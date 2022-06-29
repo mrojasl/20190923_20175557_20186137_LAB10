@@ -15,6 +15,7 @@
             <jsp:param name="title" value="Menu de humanos"/>
         </jsp:include>
         <head>
+            <link rel="shortcut icon" href="https://cdn-icons.flaticon.com/png/512/826/premium/826070.png?token=exp=1656523939~hmac=95e0835542059253ef913f926ef83145">
             <title>Pagina Principal</title>
         </head>
         <body>
