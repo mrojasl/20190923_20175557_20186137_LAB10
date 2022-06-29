@@ -70,8 +70,7 @@
         <!--
          navbar-default can be changed with navbar-ct-blue navbar-ct-azzure navbar-ct-red navbar-ct-green navbar-ct-orange
          -->
-        <nav class="navbar navbar-ct-silver navbar-fixed-top navbar-transparent" role="navigation">
-
+        <nav class="navbar navbar-ct-red navbar-fixed-top navbar-transparent" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -83,7 +82,7 @@
                     </button>
                     <a class="navbar-brand navbar-brand-logo" href="">
                         <div class="logo">
-                            <img src="https://img.freepik.com/vector-gratis/diseno-logotipo-viaje-avion-aire-plano_8035-9.jpg?w=2000" alt="" height="60px" width="60px">
+                            <img src="header_principal/Inicio_Sesion/logo2.png" alt="" height="60px" width="60px">
                         </div>
                         <div class="brand"> Tele Viajero </div>
                     </a>
@@ -91,8 +90,6 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-
-
                         <li>
                             <a>
                                 <i class="pe-7s-angle-down-circle"></i>
@@ -303,10 +300,10 @@
 
 </body>
 
-<script src="js/jquery-1.10.2.js" type="text/javascript"></script>
-<script src="js/bootstrap.js" type="text/javascript"></script>
+<script src="header_principal/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="header_principal/js/bootstrap.js" type="text/javascript"></script>
 
-<script src="js/ct-navbar.js"></script>
+<script src="header_principal/js/ct-navbar.js"></script>
 
 
 </html>
