@@ -133,17 +133,12 @@
     <div class="container tim-container" style="max-width:800px; padding-top:100px">
         <h1 class="text-center">Aquí podrás visualizar todos tus viajes...<br>
         </h1>
-        <h3>Buscador:</h3>
-        <input class="form-control col-md-3 light-table-filter" data-table="order-table" type="text"
-               placeholder="Search..">
+
 
 
 
 
         <div class="pb-5 pt-4 px-3 titlecolor">
-            <div class="col-lg-6">
-                <h1 class='text-light'>Lista de Viajes</h1>
-            </div>
         </div>
         <div class="tabla">
             <table class="table table-dark table-transparent table-hover">
