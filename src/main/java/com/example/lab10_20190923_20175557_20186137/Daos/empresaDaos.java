@@ -137,4 +137,15 @@ public class empresaDaos extends BaseDao{
             error.printStackTrace();
         }
     }
+    public void eliminarViaje(String codigo_pucp) {
+        try (Connection conn = this.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement("DELETE FROM viaje WHERE usuario_codigopucp = ?");) {
+
+            pstmt.setString(1, codigo_pucp);
+            pstmt.executeUpdate();
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
 }

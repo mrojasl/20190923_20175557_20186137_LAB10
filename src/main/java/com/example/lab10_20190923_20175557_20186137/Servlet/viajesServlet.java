@@ -32,10 +32,25 @@ public class viajesServlet extends HttpServlet {
                 view.forward(request, response);
                 break;
             case "crearViaje":
-            request.setAttribute("listaSeguros", empresaDaos.listadoSeguros());
-            request.setAttribute("listadoCostos", empresaDaos.listadoCostos());
-            view =request.getRequestDispatcher("PaginaPrincipal.jsp");
-            view.forward(request, response);
+                request.setAttribute("listaSeguros", empresaDaos.listadoSeguros());
+                request.setAttribute("listadoCostos", empresaDaos.listadoCostos());
+                view =request.getRequestDispatcher("PaginaPrincipal.jsp");
+                view.forward(request, response);
+                break;
+            case "eliminarViaje":
+                if (request.getParameter("codigo_pucp") != null) {
+                    String codigo_pucp = request.getParameter("codigo_pucp");
+
+
+                    ArrayList<BViaje> emp = empresaDaos.listadoViaje(codigo_pucp);
+
+                    if (emp != null) {
+                        empresaDaos.eliminarViaje(codigo_pucp);
+                    }
+                }
+
+                response.sendRedirect("viajesServlet");
+                break;
         }
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
