@@ -10,7 +10,7 @@
 <jsp:useBean id="listaEspecialidades" type="java.util.ArrayList<com.example.lab10_20190923_20175557_20186137.Beans.BEspecialidad>" scope="request"/>
 <html>
   <head>
-
+    <link rel="shortcut icon" href="https://cdn-icons.flaticon.com/png/512/826/premium/826070.png?token=exp=1656523939~hmac=95e0835542059253ef913f926ef83145">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
