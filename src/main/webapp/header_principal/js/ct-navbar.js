@@ -10,14 +10,14 @@ $(document).ready(function(){
         if(searchVisible == 0){
             searchVisible = 1;
             $(this).parent().addClass('active');
-            $(this).children('p').html('Close');
+            $(this).children('p').html('Cerrar');
             $('.navbar-search-form').fadeIn(function(){
                 $('.navbar-search-form input').focus();
             });
         } else {
             searchVisible = 0;
             $(this).parent().removeClass('active');
-            $(this).children('p').html('Search');
+            $(this).children('p').html('Buscar Viaje');
             $(this).blur();
             $('.navbar-search-form').fadeOut(function(){
                 $('.navbar-search-form input').blur();

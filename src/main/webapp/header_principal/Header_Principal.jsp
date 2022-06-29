@@ -93,7 +93,7 @@
                         <li>
                             <a href="javascript:void(0);" data-toggle="search" class="hidden-xs">
                                 <i class="pe-7s-search"></i>
-                                <p>Buscar viaje</p>
+                                <p>Search</p>
                             </a>
                         </li>
                         <li>
