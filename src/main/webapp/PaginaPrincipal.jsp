@@ -22,7 +22,7 @@
             <h3>Buscador:</h3>
             <input class="form-control col-md-3 light-table-filter" data-table="order-table" type="text"
                    placeholder="Search.."
-            <table class="order-table">
+
 
                 <div class="pb-5 pt-4 px-3 titlecolor">
                     <div class="col-lg-6">
@@ -79,7 +79,7 @@
                                     </div>
                                     <div class="card-body p-4 p-md-5">
                                         <form method="POST"
-                                              action="<%=request.getContextPath()%>/ListarOperadorServlet?action=crear">
+                                              action="<%=request.getContextPath()%>/viajesServlet?action=crear">
                                             <div class="row">
                                                 <div class="col-md-6 mb-1">
                                                     <div class="form-outline mb-4">
@@ -126,7 +126,6 @@
                                                 >Empresa de Seguros</label
                                                 >
                                                 <select
-
                                                         class="frm-field required sect"
                                                 >
                                                     <option disabled="disabled" selected="true">Seleccionar</option>
