@@ -66,7 +66,7 @@ public class loginServlet extends HttpServlet {
                     request.setAttribute("codigopucp", codigo);
 
                     request.setAttribute("listaViaje", empresaDaos.listadoViaje(codigo));
-                    view = request.getRequestDispatcher("PaginaPrincipal.jsp");
+                    view = request.getRequestDispatcher("header_principal/Header_Principal.jsp");
                     view.forward(request, response);
 
                 } else {
