@@ -9,11 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a42935e4-4829-4f28-a47e-352a1e958e12" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/890d319c-faeb-4de0-be95-0f24dc5c0441.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/890d319c-faeb-4de0-be95-0f24dc5c0441.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/registro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registro.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="a42935e4-4829-4f28-a47e-352a1e958e12" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -167,7 +163,7 @@
       <workItem from="1656374851963" duration="4115000" />
       <workItem from="1656420235239" duration="9526000" />
       <workItem from="1656431180493" duration="19213000" />
-      <workItem from="1656522374288" duration="579000" />
+      <workItem from="1656522374288" duration="891000" />
     </task>
     <servers />
   </component>
