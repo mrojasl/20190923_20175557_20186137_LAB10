@@ -9,7 +9,11 @@
 <jsp:useBean id="listaViaje" scope="request" type="java.util.ArrayList<com.example.lab10_20190923_20175557_20186137.Beans.BViaje>" />
 <jsp:useBean id="teleco" scope="request" type="com.example.lab10_20190923_20175557_20186137.Beans.BUsuario" />
 
-
+<%
+    response.addHeader("Cache-Control", "no-cache,no-store,private,must-revalidate,max-stale=0,post-check=0,pre-check=0");
+    response.addHeader("Pragma", "no-cache");
+    response.addDateHeader ("Expires", 0);
+%>
 
 <!doctype html>
 <html lang="en">
@@ -83,9 +87,6 @@
            navbar-ct-black
            <%}%>
 
-
-
-
          navbar-fixed-top navbar-transparent" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -125,7 +126,7 @@
                             </a>
                             <ul class="dropdown-menu">
 
-                                <li><a href="#">Cerrar Sesión</a></li>
+                                <li><a href="<%=request.getContextPath()%>/loginServlet?action=logout">Cerrar Sesión</a></li>
                             </ul>
                         </li>
                     </ul>

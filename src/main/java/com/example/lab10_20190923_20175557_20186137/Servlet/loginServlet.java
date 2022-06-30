@@ -33,6 +33,7 @@ public class loginServlet extends HttpServlet {
             case "logout":
                 session.invalidate();
                 response.sendRedirect(request.getContextPath()+"/index.jsp");
+                break;
             case "registro":
                 request.setAttribute("listaEspecialidades", u.listarEspecialidad());
                 requestDispatcher= request.getRequestDispatcher("registro.jsp");
