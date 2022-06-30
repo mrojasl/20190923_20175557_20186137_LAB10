@@ -82,7 +82,7 @@ public class userDao extends BaseDao{
     }
     public void crearUsuario(BUsuario usuario){
         String sql="insert into usuario (codigopucp,nombre,apellido,edad,correopucp,idespecialidad,password) values \n" +
-                "(?,?,?,?,?,?,?);";
+                "(?,?,?,?,?,?,sha2(?,256));";
         try (Connection conn = this.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)
         ) {

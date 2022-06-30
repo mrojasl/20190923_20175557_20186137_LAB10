@@ -2,6 +2,8 @@ package com.example.lab10_20190923_20175557_20186137.Servlet;
 import com.example.lab10_20190923_20175557_20186137.Beans.BUsuario;
 import com.example.lab10_20190923_20175557_20186137.Beans.BViaje;
 import com.example.lab10_20190923_20175557_20186137.Daos.empresaDaos;
+import com.example.lab10_20190923_20175557_20186137.Daos.userDao;
+
 import java.io.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -23,7 +25,17 @@ public class viajesServlet extends HttpServlet {
         String action = request.getParameter("action") == null ? "lista_viaje" : request.getParameter("action");
         empresaDaos empresaDaos = new empresaDaos();
         RequestDispatcher view;
+        userDao userDao = new userDao();
         switch (action){
+            case "editarViaje":
+
+                BUsuario teleco = userDao.obtenerUsuario(request.getParameter("idUser"));
+                request.setAttribute("teleco",teleco);
+                request.setAttribute("idViaje",Integer.parseInt(request.getParameter("id")));
+                view = request.getRequestDispatcher("header_principal/Editar_Viajes.jsp");
+                view.forward(request, response);
+
+                break;
             case "lista_viaje":
                 String codigopucp = request.getParameter("codigopucp");
                 ArrayList<BViaje> usuario = empresaDaos.listadoViaje(codigopucp);
@@ -37,19 +49,17 @@ public class viajesServlet extends HttpServlet {
                 view =request.getRequestDispatcher("PaginaPrincipal.jsp");
                 view.forward(request, response);
                 break;
-            case "eliminarViaje":
-                if (request.getParameter("codigo_pucp") != null) {
-                    String codigo_pucp = request.getParameter("codigo_pucp");
+            case "borrarViaje":
+                String codigo = request.getParameter("idUser");
+                String idViaje = request.getParameter("id");
+                empresaDaos.eliminarViaje(codigo,idViaje);
 
+                BUsuario teleco2 = userDao.obtenerUsuario(codigo);
 
-                    ArrayList<BViaje> emp = empresaDaos.listadoViaje(codigo_pucp);
-
-                    if (emp != null) {
-                        empresaDaos.eliminarViaje(codigo_pucp);
-                    }
-                }
-
-                response.sendRedirect("viajesServlet");
+                request.setAttribute("teleco",teleco2);
+                request.setAttribute("listaViaje", empresaDaos.listadoViaje(codigo));
+                view = request.getRequestDispatcher("header_principal/Header_Principal.jsp");
+                view.forward(request, response);
                 break;
         }
     }

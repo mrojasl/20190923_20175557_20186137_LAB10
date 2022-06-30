@@ -155,6 +155,8 @@
 
 
 
+
+
         <div class="pb-5 pt-4 px-3 titlecolor">
         </div>
         <div class="tabla">
@@ -168,6 +170,7 @@
                     <th>Empresa de seguros</th>
                     <th>Numero de Boletos</th>
                     <th>Costo Total</th>
+                    <th></th>
                     <th></th>
                 </thead>
                 <%
@@ -191,7 +194,10 @@
                     <td><%=Math.round(viaje.getCostoTotal()*100.0)/100.0%>
                     </td>
                     <td>
-                        <a href=""><button type="button" class="btn btn-outline-dark btn-sm">Editar</button></a>
+                        <a href="<%=request.getContextPath()%>/viajesServlet?action=editarViaje&id=<%=viaje.getIdviaje()%>&idUser=<%=teleco.getCodigoPucp()%>"><button type="button" class="btn btn-outline-dark btn-sm">Editar</button></a>
+                    </td>
+                    <td>
+                        <a href="<%=request.getContextPath()%>/viajesServlet?action=borrarViaje&id=<%=viaje.getIdviaje()%>&idUser=<%=teleco.getCodigoPucp()%>"><button type="button" class="btn btn-outline-danger btn-sm">Borrar</button></a>
                     </td>
 
 
@@ -306,6 +312,8 @@
             </div>
         </form>
     </div>
+
+
 
 
 

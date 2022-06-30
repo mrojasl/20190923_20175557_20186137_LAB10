@@ -1,154 +1,172 @@
-<%--
+<%@ page import="com.example.lab10_20190923_20175557_20186137.Beans.BViaje" %><%--
   Created by IntelliJ IDEA.
   User: caleb
   Date: 29/06/2022
-  Time: 18:38
+  Time: 14:58
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<jsp:useBean id="idViaje" scope="request" type="java.lang.Integer" />
+<jsp:useBean id="teleco" scope="request" type="com.example.lab10_20190923_20175557_20186137.Beans.BUsuario" />
+
+
+
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link href="css/bootstrap.css" rel="stylesheet" />
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <link href="css/bootstrap.css" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/header_principal/css/ct-navbar.css" />
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/header_principal/css/pe-icon-7-stroke.css" />
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/header_principal/css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/header_principal/css/ct-navbar.css" />
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/header_principal/css/pe-icon-7-stroke.css" />
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/header_principal/css/bootstrap.css" />
 
 
-    <link href="css/pe-icon-7-stroke.css" rel="stylesheet" />
-    <link href="css/ct-navbar.css" rel="stylesheet" />
+        <link href="css/pe-icon-7-stroke.css" rel="stylesheet" />
+        <link href="css/ct-navbar.css" rel="stylesheet" />
 
-    <!--     Font Awesome     -->
-    <!--<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
+        <!--     Font Awesome     -->
+        <!--<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
 
-    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-    <style>
-        .fa-heart{
-            color: #F74933;
-        }
-        .space-100{
-            height: 100px;
-            display: block;
-        }
-        pre.prettyprint{
-            background-color: #ffffff;
-            border: 1px solid #999;
-            margin-top: 20px;
-            padding: 20px;
-            text-align: left;
-        }
-        .atv, .str{
-            color: #05AE0E;
-        }
-        .tag, .pln, .kwd{
-            color: #3472F7;
-        }
-        .atn{
-            color: #2C93FF;
-        }
-        .pln{
-            color: #333;
-        }
-        .com{
-            color: #999;
-        }
-        .gradient-custom {
-            /* fallback for old browsers */
-            background: #D4AF37;
+        <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+        <style>
+            .fa-heart{
+                color: #F74933;
+            }
+            .space-100{
+                height: 100px;
+                display: block;
+            }
+            pre.prettyprint{
+                background-color: #ffffff;
+                border: 1px solid #999;
+                margin-top: 20px;
+                padding: 20px;
+                text-align: left;
+            }
+            .atv, .str{
+                color: #05AE0E;
+            }
+            .tag, .pln, .kwd{
+                color: #3472F7;
+            }
+            .atn{
+                color: #2C93FF;
+            }
+            .pln{
+                color: #333;
+            }
+            .com{
+                color: #999;
+            }
+        </style>
+        <title>
+            main
+        </title>
+    </head>
 
-            /* Chrome 10-25, Safari 5.1-6 */
-            background: -webkit-linear-gradient(to bottom right, #bacbe6, #D4AF37);
+    <body>
+        <div id="navbar-full">
+            <div id="navbar">
+                <!--
+                 navbar-default can be changed with navbar-ct-blue navbar-ct-azzure navbar-ct-red navbar-ct-green navbar-ct-orange
+                 -->
+                <nav class="navbar <%if(teleco.getStatus().equalsIgnoreCase("normal")){%>
+         navbar-ct-blue
+         <%} else if (teleco.getStatus().equalsIgnoreCase("silver")){%>
+         navbar-ct-silver
+           <%} else if (teleco.getStatus().equalsIgnoreCase("gold")){%>
+           navbar-ct-gold
+           <%} else if (teleco.getStatus().equalsIgnoreCase("platinum")){%>
+           navbar-ct-black
+           <%}%>
 
-            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-            background: linear-gradient(to bottom right, #bacbe6, #D4AF37)
-        }
-
-        .card-registration .select-input.form-control[readonly]:not([disabled]) {
-            font-size: 1rem;
-            line-height: 2.15;
-            padding-left: .75em;
-            padding-right: .75em;
-        }
-        .card-registration .select-arrow {
-            top: 13px;
-        }
-    </style>
-    <title>
-        main
-    </title>
-</head>
-
-<body>
-<div id="navbar-full">
-    <div id="navbar">
-        <!--
-         navbar-default can be changed with navbar-ct-blue navbar-ct-azzure navbar-ct-red navbar-ct-green navbar-ct-orange
-         -->
-        <nav class="navbar navbar-ct-red navbar-fixed-top navbar-transparent" role="navigation">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand navbar-brand-logo" href="">
-                        <div class="logo">
-                            <img src="header_principal/Inicio_Sesion/logo2.png" alt="" height="60px" width="60px">
+         navbar-fixed-top navbar-transparent" role="navigation">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand navbar-brand-logo" href="">
+                                <div class="logo" style="border: hidden">
+                                    <img src="header_principal/Inicio_Sesion/logo2.png" alt="" height="60px" width="60px">
+                                </div>
+                                <div class="brand"> Tele Viajero </div>
+                            </a>
                         </div>
-                        <div class="brand"> Tele Viajero </div>
-                    </a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a>
-                                <i class="pe-7s-angle-down-circle"></i>
-                                <p>Status</p>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="pe-7s-user"></i>
-                                <p>Nombre Completo <b class="caret"></b></p>
-                            </a>
-                            <ul class="dropdown-menu">
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="javascript:void(0);" data-toggle="search" class="hidden-xs">
+                                        <i class="pe-7s-search"></i>
+                                        <p>Search</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <i class="pe-7s-angle-down-circle"></i>
+                                        <p><%=teleco.getStatus()%></p>
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="pe-7s-user"></i>
+                                        <p><%=teleco.getNombre()%> <%=teleco.getApellido()%><b class="caret"></b></p>
+                                    </a>
+                                    <ul class="dropdown-menu">
 
-                                <li><a href="#">Cerrar Sesión</a></li>
+                                        <li><a href="<%=request.getContextPath()%>/loginServlet?action=logout">Cerrar Sesión</a></li>
+                                    </ul>
+                                </li>
                             </ul>
-                        </li>
-                    </ul>
-                    <form class="navbar-form navbar-right navbar-search-form" role="search">
-                        <div class="form-group">
-                            <input type="text" value="" class="form-control" placeholder="Search...">
-                        </div>
-                    </form>
+                            <form class="navbar-form navbar-right navbar-search-form" role="search">
+                                <div class="form-group">
+                                    <input type="text" value="" class="form-control" placeholder="Search...">
+                                </div>
+                            </form>
 
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-        <div class="blurred-container">
-            <div class="img-src" style="background-image: url('Inicio_Sesion/fondo.jpg')"></div>
-        </div>
-    </div><!--  end navbar -->
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+                <div class="blurred-container">
+                    <div class="img-src" style="background-image: url('Inicio_Sesion/fondo.jpg')"></div>
+                </div>
+            </div><!--  end navbar -->
 
-</div> <!-- end menu-dropdown -->
+        </div> <!-- end menu-dropdown -->
 
 <div class="main">
     <div class="container tim-container" style="max-width:800px; padding-top:100px">
-        <div style="background-color: #D4AF37">
+        <div style="background-color:
+            <%if(teleco.getStatus().equalsIgnoreCase("normal")){%>
+                lightskyblue
+            <%} else if (teleco.getStatus().equalsIgnoreCase("silver")){%>
+                silver
+            <%} else if (teleco.getStatus().equalsIgnoreCase("gold")){%>
+                goldenrod
+            <%} else if (teleco.getStatus().equalsIgnoreCase("platinum")){%>
+                gray
+            <%}%>
+
+
+
+">
         <form method="post">
             <div id="crear" class="container tab-pane active">
                 <div class="col-lg-6 bg-indigo text-white ui-icon-background">
                     <div class="p-5">
                         <h3 class="fw-normal mb-5">Editar Viaje</h3>
+
+
+
+
 
 
                         <div class="row">
@@ -235,6 +253,9 @@
             </div>
         </form>
         </div>
+
+
+
 
 
 

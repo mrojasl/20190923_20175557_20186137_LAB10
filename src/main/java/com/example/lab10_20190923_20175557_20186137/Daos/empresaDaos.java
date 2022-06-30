@@ -139,11 +139,12 @@ public class empresaDaos extends BaseDao{
             error.printStackTrace();
         }
     }
-    public void eliminarViaje(String codigo_pucp) {
+    public void eliminarViaje(String idUser, String id) {
         try (Connection conn = this.getConnection();
-             PreparedStatement pstmt = conn.prepareStatement("DELETE FROM viaje WHERE usuario_codigopucp = ?");) {
+             PreparedStatement pstmt = conn.prepareStatement("DELETE FROM viaje WHERE usuario_codigopucp = ? and idviaje = ?");) {
 
-            pstmt.setString(1, codigo_pucp);
+            pstmt.setString(1, idUser);
+            pstmt.setString(2, id);
             pstmt.executeUpdate();
 
         } catch (SQLException ex) {
