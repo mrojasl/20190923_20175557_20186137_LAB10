@@ -7,6 +7,13 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:useBean id="listaViaje" scope="request" type="java.util.ArrayList<com.example.lab10_20190923_20175557_20186137.Beans.BViaje>" />
+<jsp:useBean id="teleco" scope="request" type="com.example.lab10_20190923_20175557_20186137.Beans.BUsuario" />
+
+<%
+    response.addHeader("Cache-Control", "no-cache,no-store,private,must-revalidate,max-stale=0,post-check=0,pre-check=0");
+    response.addHeader("Pragma", "no-cache");
+    response.addDateHeader ("Expires", 0);
+%>
 
 <!doctype html>
 <html lang="en">
@@ -70,7 +77,17 @@
         <!--
          navbar-default can be changed with navbar-ct-blue navbar-ct-azzure navbar-ct-red navbar-ct-green navbar-ct-orange
          -->
-        <nav class="navbar navbar-ct-red navbar-fixed-top navbar-transparent" role="navigation">
+        <nav class="navbar <%if(teleco.getStatus().equalsIgnoreCase("normal")){%>
+         navbar-ct-blue
+         <%} else if (teleco.getStatus().equalsIgnoreCase("silver")){%>
+         navbar-ct-silver
+           <%} else if (teleco.getStatus().equalsIgnoreCase("gold")){%>
+           navbar-ct-gold
+           <%} else if (teleco.getStatus().equalsIgnoreCase("platinum")){%>
+           navbar-ct-black
+           <%}%>
+
+         navbar-fixed-top navbar-transparent" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -81,7 +98,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand navbar-brand-logo" href="">
-                        <div class="logo">
+                        <div class="logo" style="border: hidden">
                             <img src="header_principal/Inicio_Sesion/logo2.png" alt="" height="60px" width="60px">
                         </div>
                         <div class="brand"> Tele Viajero </div>
@@ -99,17 +116,17 @@
                         <li>
                             <a>
                                 <i class="pe-7s-angle-down-circle"></i>
-                                <p>Status</p>
+                                <p><%=teleco.getStatus()%></p>
                             </a>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="pe-7s-user"></i>
-                                <p>Nombre Completo <b class="caret"></b></p>
+                                <p><%=teleco.getNombre()%> <%=teleco.getApellido()%><b class="caret"></b></p>
                             </a>
                             <ul class="dropdown-menu">
 
-                                <li><a href="#">Cerrar Sesión</a></li>
+                                <li><a href="<%=request.getContextPath()%>/loginServlet?action=logout">Cerrar Sesión</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -162,10 +179,17 @@
                     </td>
                     <td><%=viaje.getFecha_viaje()%>
                     </td>
+                    <td><%=viaje.getCiudadOrigen()%>
+                    </td>
+                    <td><%=viaje.getCiudadDestino()%>
+                    </td>
+                    <td><%=viaje.getSeguro()%>
+                    </td>
                     <td><%=viaje.getCantidad_tickets()%>
                     </td>
-                    <td><%=viaje.getIdcostos_ciudad()%>
+                    <td><%=viaje.getCostoTotal()%>
                     </td>
+
 
                 </tr>
                 <%

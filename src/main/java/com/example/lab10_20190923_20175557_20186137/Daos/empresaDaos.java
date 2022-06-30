@@ -11,14 +11,12 @@ import java.util.ArrayList;
 public class empresaDaos extends BaseDao{
     public ArrayList<BViaje> listadoViaje(String codigo){
         ArrayList<BViaje> listaViaje = new ArrayList<>();
-        String sql = "select  v.idviaje as \"idviaje\", v.fecha_reserva, v.fecha_viaje, ciu.ciudad as \"ciudad de origen\",\n" +
-                "ci.ciudad as \"ciudad de destino\", se.idseguro, v.cantidad_tickets as \"numero boletos\",\n" +
-                "round(v.cantidad_tickets*co.costo) as \"costo total\"\n" +
-                "from viaje v inner join seguro se on (v.seguro_idseguro=se.idseguro)\n" +
-                "inner join costosciudad co on (co.idcostosciudad=v.idcostosciudad)\n" +
-                "inner join ciudad ciu on (ciu.idciudad = co.idciudad_origen)\n" +
-                "inner join ciudad ci on (ci.idciudad = co.idciudad_destino)\n" +
-                "where v.usuario_codigopucp = ?";
+        String sql = "select v.idviaje,v.fecha_reserva,v.fecha_viaje,co.ciudad,cd.ciudad,s.seguro,\n" +
+                "v.cantidad_tickets,(v.cantidad_tickets*cc.costo)\n" +
+                "from viaje v inner join costosciudad cc on (v.idcostosciudad=cc.idcostosciudad)\n" +
+                "inner join seguro s on (s.idseguro=v.seguro_idseguro) inner join ciudad co\n" +
+                "on(co.idciudad=cc.idciudad_origen) inner join ciudad cd on (cd.idciudad=cc.idciudad_destino)\n" +
+                "inner join usuario u on (u.codigopucp=v.usuario_codigopucp) where u.codigopucp=?";
 
         try (Connection conn = this.getConnection();
             PreparedStatement pstmt = conn.prepareStatement(sql);){
@@ -31,11 +29,11 @@ public class empresaDaos extends BaseDao{
                     vi.setIdviaje(rs.getInt(1));
                     vi.setFecha_reserva(rs.getString(2));
                     vi.setFecha_viaje(rs.getString(3));
-                    vi.setIdciudad(rs.getString(4));
-                    vi.setIdciudad(rs.getString(5));
-                    vi.setIdseguro(rs.getInt(6));
+                    vi.setCiudadOrigen(rs.getString(4));
+                    vi.setCiudadDestino(rs.getString(5));
+                    vi.setSeguro(rs.getString(6));
                     vi.setCantidad_tickets(rs.getInt(7));
-                    vi.setCostoTotal(rs.getFloat(8));
+                    vi.setCostoTotal(rs.getDouble(8));
 
                     listaViaje.add(vi);
                 }
@@ -133,8 +131,8 @@ public class empresaDaos extends BaseDao{
             pstmt.setString(2, viaje.getFecha_reserva());
             pstmt.setString(3, viaje.getFecha_viaje());
             pstmt.setInt(4, viaje.getCantidad_tickets());
-            pstmt.setInt(5, viaje.getIdcostos_ciudad());
-            pstmt.setInt(6, viaje.getIdseguro());
+            pstmt.setInt(5, viaje.getIdCostos_ciudad());
+            pstmt.setInt(6, viaje.getIdSeguro());
 
             pstmt.executeUpdate();
         } catch (SQLException error) {

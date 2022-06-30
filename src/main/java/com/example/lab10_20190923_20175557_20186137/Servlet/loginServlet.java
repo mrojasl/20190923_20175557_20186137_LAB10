@@ -33,6 +33,7 @@ public class loginServlet extends HttpServlet {
             case "logout":
                 session.invalidate();
                 response.sendRedirect(request.getContextPath()+"/index.jsp");
+                break;
             case "registro":
                 request.setAttribute("listaEspecialidades", u.listarEspecialidad());
                 requestDispatcher= request.getRequestDispatcher("registro.jsp");
@@ -65,6 +66,8 @@ public class loginServlet extends HttpServlet {
                     String codigo = userDao.obtenerCodigoPorCorreo(emailInput);
                     request.setAttribute("codigopucp", codigo);
 
+                    BUsuario teleco = userDao.obtenerUsuario(codigo);
+                    request.setAttribute("teleco",teleco);
                     request.setAttribute("listaViaje", empresaDaos.listadoViaje(codigo));
                     view = request.getRequestDispatcher("header_principal/Header_Principal.jsp");
                     view.forward(request, response);
