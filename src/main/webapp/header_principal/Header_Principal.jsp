@@ -188,7 +188,7 @@
                     </td>
                     <td><%=viaje.getCantidad_tickets()%>
                     </td>
-                    <td><%=viaje.getCostoTotal()%>
+                    <td><%=Math.round(viaje.getCostoTotal()*100.0)/100.0%>
                     </td>
                     <td>
                         <a href=""><button type="button" class="btn btn-outline-dark btn-sm">Editar</button></a>
