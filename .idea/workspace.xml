@@ -9,14 +9,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7e79a58-afb3-4fc6-8a60-7ca0ebbba834" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d83d1e33-a28f-4c21-a3b1-b74f4452ae53" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/webapp/header_principal/Header_Principal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header_principal/Header_Principal.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -38,6 +45,8 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="5d6ab607-fb82-4dff-9865-3f0851c37966" />
+        <option name="HTTP_PORT" value="8086" />
+        <option name="JNDI_PORT" value="1106" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
