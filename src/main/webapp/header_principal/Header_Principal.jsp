@@ -202,108 +202,98 @@
             </table>
         </div>
     </div>
-    <section class="vh-100">
-        <div class="container py-4 h-100">
-            <div class="row justify-content-center align-items-center h-100">
-                <div class="col-12 col-lg-9 col-xl-7">
-                    <div
-                            class="card shadow-2-strong card-registration"
-                            style="border-radius: 15px"
-                    >
-                        <div
-                                class="card-header"
-                                style="background-color: #e72d4b; color: white"
-                        >
-                            <h4 class="my-2">Añadir Viajes</h4>
+    <div style="background-color: #D4AF37">
+        <form method="post">
+            <div id="crear" class="container tab-pane active">
+                <div class="col-lg-6 bg-indigo text-white ui-icon-background">
+                    <div class="p-5">
+                        <h3 class="fw-normal mb-5">Crear Viaje</h3>
+
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4 pb-2">
+
+                                <div class="form-outline form-white">
+                                    <input type="date" id="fecha_reserva" class="form-control form-control-lg">
+                                    <label class="form-label" for="fecha_reserva" style="margin-left: 0px;">Fecha de reserva</label>
+                                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 58.4px;"></div><div class="form-notch-trailing"></div></div></div>
+
+                            </div>
+                            <div class="col-md-6 mb-4 pb-2">
+
+                                <div class="form-outline form-white">
+                                    <input type="date" id="fecha_viaje" class="form-control form-control-lg">
+                                    <label class="form-label" for="fecha_viaje" style="margin-left: 0px;">Fecha de viaje</label>
+                                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 40px;"></div><div class="form-notch-trailing"></div></div></div>
+
+                            </div>
                         </div>
-                        <div class="card-body p-4 p-md-5">
-                            <form method="POST"
-                                  action="<%=request.getContextPath()%>/viajesServlet?action=crear">
-                                <div class="row">
-                                    <div class="col-md-6 mb-1">
-                                        <div class="form-outline mb-4">
-                                            <label class="form-label" for="fecha_reserva">Fecha de
-                                                Reserva</label>
-                                            <input name="fecha_reserva"
-                                                   type="date"
-                                                   id="fecha_reserva"
-                                                   class="form-control"
-                                                   placeholder="aaaa-mm-dd"/>
-                                        </div>
 
-                                    </div>
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="fecha_viaje">Fecha de Viaje</label>
-                                        <input name="fecha_viaje"
-                                               type="date"
-                                               id="fecha_viaje"
-                                               class="form-control"
-                                               placeholder="aaaa-mm-dd"/>
-                                    </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-4 pb-2">
 
-                                </div>
-
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="idciudad_origen">Ciudad Origen</label>
-                                    <input name="idciudad_origen"
-                                           type="text"
-                                           id="idciudad_origen"
-                                           class="form-control"
-                                           placeholder="Ingrese Ciudad Origen"/>
-                                </div>
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="idciudad_destino">Ciudad Destino</label>
-                                    <input name="idciudad_destino"
-                                           type="text"
-                                           id="idciudad_destino"
-                                           class="form-control"
-                                           placeholder="Ingrese Ciudad Destino"/>
-                                </div>
-
-                                <div class="form-outline mb-4">
-                                    <label class="form-label"
-                                    >Empresa de Seguros</label
-                                    >
-                                    <select
-                                            class="frm-field required sect"
-                                    >
-                                        <option disabled="disabled" selected="true">Seleccionar</option>
-                                        <option>Rimac</option>
-                                        <option>Pacifico</option>
-                                        <option>La Positiva</option>
-                                        <option>Seguro Internacional</option>
-                                        <option>Otro</option>
+                                <div class="form-outline form-white">
+                                    <select type="text" id="origen" class="form-control form-control-lg">
+                                        <option selected></option>
+                                        <option value="1">Two</option>
+                                        <option value="2">Three</option>
+                                        <option value="3">Four</option>
                                     </select>
-                                </div>
+                                    <label class="form-label" for="origen" style="margin-left: 0px;">Ciudad Origen</label>
+                                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 58.4px;"></div><div class="form-notch-trailing"></div></div></div>
 
+                            </div>
+                            <div class="col-md-6 mb-4 pb-2">
 
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="cantidad_tickets">Numero de Boletos</label>
-                                    <input name="cantidad_tickets"
-                                           type="number"
-                                           id="cantidad_tickets"
-                                           class="form-control"
-                                           placeholder="Ingrese numero"/>
-                                </div>
+                                <div class="form-outline form-white">
+                                    <select type="text" id="destino" class="form-control form-control-lg">
+                                        <option selected></option>
+                                        <option value="1">Two</option>
+                                        <option value="2">Three</option>
+                                        <option value="3">Four</option>
+                                    </select>
+                                    <label class="form-label" for="destino" style="margin-left: 0px;">Ciudad Destino</label>
+                                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 58.4px;"></div><div class="form-notch-trailing"></div></div></div>
 
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="idcostos_ciudad">Costo Total</label>
-                                    <input name="idcostos_ciudad"
-                                           type="number"
-                                           id="idcostos_ciudad"
-                                           class="form-control"
-                                           placeholder="Ingrese numero"/>
-                                </div>
+                            </div>
 
-                                <br>
-                                <button type="submit" class="btn btn-tele">Añadir Viaje</button>
-                            </form>
                         </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-4 pb-2">
+
+                                <div class="form-outline form-white">
+                                    <select type="text" id="seguros" class="form-control form-control-lg">
+                                        <option selected></option>
+                                        <option value="1">Two</option>
+                                        <option value="2">Three</option>
+                                        <option value="3">Four</option>
+                                    </select>
+                                    <label class="form-label" for="seguros" style="margin-left: 0px;">Empresa de Seguros</label>
+                                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 58.4px;"></div><div class="form-notch-trailing"></div></div></div>
+
+                            </div>
+                            <div class="col-md-3 mb-4 pb-2">
+                                <div class="form-outline form-white">
+                                    <input type="text" id="boletos" class="form-control form-control-lg">
+                                    <label class="form-label" for="boletos" style="margin-left: 0px;">Número de Boletos</label>
+                                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 40px;"></div><div class="form-notch-trailing"></div></div></div>
+
+                            </div>
+                            <div class="col-md-3 mb-4 pb-2">
+                                <div class="form-outline form-white">
+                                    <input type="text" id="Costo" class="form-control form-control-lg">
+                                    <label class="form-label" for="costo" style="margin-left: 0px;">Costo total</label>
+                                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 40px;"></div><div class="form-notch-trailing"></div></div></div>
+
+                            </div>
+
+                        </div>
+                        <button type="button" class="btn btn-light btn-lg" style="margin-bottom: fill; color:#000000; background-color: #ffecb5"   data-mdb-ripple-color="dark">Crear</button>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </form>
+    </div>
 
 
 
