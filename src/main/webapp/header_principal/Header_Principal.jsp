@@ -98,7 +98,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand navbar-brand-logo" href="">
-                        <div class="logo">
+                        <div class="logo" style="border: hidden">
                             <img src="header_principal/Inicio_Sesion/logo2.png" alt="" height="60px" width="60px">
                         </div>
                         <div class="brand"> Tele Viajero </div>
