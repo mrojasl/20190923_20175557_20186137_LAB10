@@ -202,7 +202,19 @@
             </table>
         </div>
     </div>
-    <div style="background-color: #D4AF37">
+    <div style="background-color:
+        <%if(teleco.getStatus().equalsIgnoreCase("normal")){%>
+            lightskyblue
+        <%} else if (teleco.getStatus().equalsIgnoreCase("silver")){%>
+            silver
+        <%} else if (teleco.getStatus().equalsIgnoreCase("gold")){%>
+            goldenrod
+        <%} else if (teleco.getStatus().equalsIgnoreCase("platinum")){%>
+            gray
+        <%}%>
+
+
+">
         <form method="post">
             <div id="crear" class="container tab-pane active">
                 <div class="col-lg-6 bg-indigo text-white ui-icon-background">
