@@ -42,14 +42,23 @@
       body{
         background-position: center ;
       }
+      video{
+        position: fixed;
+        min-width: 100%;
+        min-height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: -1;
+      }
     </style>
   </head>
-  <body background ="Inicio_Sesion/fondo.jpg")>
+  <body>
     <div class="modal-fullscreen-sm-down text-center w-75 mt-5 rounded align-content-center ">
-      <div class="col-sm-14" style="background-color: black;margin-left: 500px" >
+      <div class="col-sm-14" style="background-color: rgba(0, 0, 0, 0.4);;margin-left: 500px" >
         <div class="mb-3">
-
-          <img class="mb-4 mt-4" src="Inicio_Sesion/logo.png" alt=" " width="230" height="230">
+          <video src="https://static.videezy.com/system/resources/previews/000/036/212/original/I059.mp4" autoplay="true" muted="true" loop="true" poster="Inicio_Sesion/fondo.jpg"></video>
+          <img class="mb-4 mt-4" src="Inicio_Sesion/avion.png" alt=" " width="230" height="230">
           <p class="text-center" style="color: aliceblue; font-size: 25px" ><b>Registro</b></p>
 
           <form method="post" action="<%=request.getContextPath()%>/loginServlet?action=crearUser">
@@ -86,8 +95,8 @@
               <input oninput="matchPassword(this.value)" required="required" type="password" class="form-control" placeholder="Repetir Contraseña">
             </div>
 
-            <div id="mensajePasswordMala" class="text-danger mb-2">La contraseña debe contener mayúsculas, números y carácteres especiales. (8 dígitos mín.)</div>
-            <div id="mensajePasswordNoMatch" class="text-danger mb-2">Las contraseñas deben coincidir.</div>
+            <div id="mensajePasswordMala" class=" mb-2" style="color: lightcyan">La contraseña debe contener mayúsculas, números y carácteres especiales. (8 dígitos mín.)</div>
+            <div id="mensajePasswordNoMatch" class=" mb-2" style="color: lightcyan">Las contraseñas deben coincidir.</div>
 
 
 
