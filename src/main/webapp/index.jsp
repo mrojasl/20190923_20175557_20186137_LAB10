@@ -70,6 +70,9 @@
                         <div class="mb-3 mt-3 ms-4 me-4">
                             <input name="password" type="password" class="form-control" placeholder="Contraseña">
                         </div>
+                        <% if (request.getParameter("erroresp") != null) { %>
+                        <div class="text-danger mb-2">No eres de la fibra</div>
+                        <%}%>
                         <% if (request.getParameter("error") != null) { %>
                         <div class="text-danger mb-2">Error en usuario o contraseña</div>
                         <%}%>

@@ -67,6 +67,14 @@ public class loginServlet extends HttpServlet {
                     request.setAttribute("codigopucp", codigo);
 
                     BUsuario teleco = userDao.obtenerUsuario(codigo);
+
+
+                    if(teleco.getIdespecialidad()!=1){
+                        response.sendRedirect(request.getContextPath() + "/loginServlet?erroresp");
+                        break;
+                    }
+
+
                     request.setAttribute("teleco",teleco);
                     request.setAttribute("listaViaje", empresaDaos.listadoViaje(codigo));
                     view = request.getRequestDispatcher("header_principal/Header_Principal.jsp");
