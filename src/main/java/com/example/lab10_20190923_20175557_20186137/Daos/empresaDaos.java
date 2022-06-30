@@ -150,4 +150,9 @@ public class empresaDaos extends BaseDao{
             ex.printStackTrace();
         }
     }
+
+    public int getEightDigitsNumber() {
+        double eightDigits = 10000000 + Math.random() * 90000000;
+        return (int) eightDigits;
+    }
 }
