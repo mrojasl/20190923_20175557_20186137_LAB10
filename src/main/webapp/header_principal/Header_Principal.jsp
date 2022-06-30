@@ -148,7 +148,7 @@
 
 <div class="main">
     <div class="container tim-container" style="max-width:800px; padding-top:100px">
-        <h1 class="text-center">Aquí podrás visualizar todos tus viajes...<br>
+        <h1 class="text-center">Viajes<br>
         </h1>
 
 
@@ -168,6 +168,7 @@
                     <th>Empresa de seguros</th>
                     <th>Numero de Boletos</th>
                     <th>Costo Total</th>
+                    <th></th>
                 </thead>
                 <%
                     for (BViaje viaje : listaViaje) {
@@ -188,6 +189,9 @@
                     <td><%=viaje.getCantidad_tickets()%>
                     </td>
                     <td><%=viaje.getCostoTotal()%>
+                    </td>
+                    <td>
+                        <a href=""><button type="button" class="btn btn-outline-dark btn-sm">Editar</button></a>
                     </td>
 
 
