@@ -9,7 +9,7 @@
 <%@ page import="com.example.lab10_20190923_20175557_20186137.Beans.BCostociudad" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
-  <head>
+
     <head>
       <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/207/207052.png">
       <meta charset="utf-8" />
@@ -31,21 +31,14 @@
               crossorigin="anonymous"
       ></script>
     </head>
-    </table>
-    </div>
-    </div>
+
+
     <section class="vh-100">
       <div class="container py-4 h-100">
         <div class="row justify-content-center align-items-center h-100">
           <div class="col-12 col-lg-9 col-xl-7">
-            <div
-                    class="card shadow-2-strong card-registration"
-                    style="border-radius: 15px"
-            >
-              <div
-                      class="card-header"
-                      style="background-color: #e72d4b; color: white"
-              >
+            <div  class="card shadow-2-strong card-registration" style="border-radius: 15px">
+              <div class="card-header" style="background-color: #e72d4b; color: white">
                 <h4 class="my-2">Añadir Viajes</h4>
               </div>
               <div class="card-body p-4 p-md-5">
@@ -93,12 +86,8 @@
                   </div>
 
                   <div class="form-outline mb-4">
-                    <label class="form-label" for="seguro"
-                    >Empresa de Seguros</label
-                    >
-                    <select
-                            class="frm-field required sect"
-                    >
+                    <label class="form-label">Empresa de Seguros</label>
+                    <select class="frm-field required sect">
                       <option disabled="disabled" selected="true">Seleccionar</option>
                       <option>Rimac</option>
                       <option>Pacifico</option>
@@ -130,4 +119,11 @@
                   <button type="submit" class="btn btn-tele">Editar Viaje</button>
 
                   </body>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 </html>

@@ -1,0 +1,268 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: caleb
+  Date: 29/06/2022
+  Time: 18:38
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/header_principal/css/ct-navbar.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/header_principal/css/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/header_principal/css/bootstrap.css" />
+
+
+    <link href="css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href="css/ct-navbar.css" rel="stylesheet" />
+
+    <!--     Font Awesome     -->
+    <!--<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
+
+    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <style>
+        .fa-heart{
+            color: #F74933;
+        }
+        .space-100{
+            height: 100px;
+            display: block;
+        }
+        pre.prettyprint{
+            background-color: #ffffff;
+            border: 1px solid #999;
+            margin-top: 20px;
+            padding: 20px;
+            text-align: left;
+        }
+        .atv, .str{
+            color: #05AE0E;
+        }
+        .tag, .pln, .kwd{
+            color: #3472F7;
+        }
+        .atn{
+            color: #2C93FF;
+        }
+        .pln{
+            color: #333;
+        }
+        .com{
+            color: #999;
+        }
+        .gradient-custom {
+            /* fallback for old browsers */
+            background: #D4AF37;
+
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: -webkit-linear-gradient(to bottom right, #bacbe6, #D4AF37);
+
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: linear-gradient(to bottom right, #bacbe6, #D4AF37)
+        }
+
+        .card-registration .select-input.form-control[readonly]:not([disabled]) {
+            font-size: 1rem;
+            line-height: 2.15;
+            padding-left: .75em;
+            padding-right: .75em;
+        }
+        .card-registration .select-arrow {
+            top: 13px;
+        }
+    </style>
+    <title>
+        main
+    </title>
+</head>
+
+<body>
+<div id="navbar-full">
+    <div id="navbar">
+        <!--
+         navbar-default can be changed with navbar-ct-blue navbar-ct-azzure navbar-ct-red navbar-ct-green navbar-ct-orange
+         -->
+        <nav class="navbar navbar-ct-red navbar-fixed-top navbar-transparent" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand navbar-brand-logo" href="">
+                        <div class="logo">
+                            <img src="header_principal/Inicio_Sesion/logo2.png" alt="" height="60px" width="60px">
+                        </div>
+                        <div class="brand"> Tele Viajero </div>
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a>
+                                <i class="pe-7s-angle-down-circle"></i>
+                                <p>Status</p>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="pe-7s-user"></i>
+                                <p>Nombre Completo <b class="caret"></b></p>
+                            </a>
+                            <ul class="dropdown-menu">
+
+                                <li><a href="#">Cerrar Sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-right navbar-search-form" role="search">
+                        <div class="form-group">
+                            <input type="text" value="" class="form-control" placeholder="Search...">
+                        </div>
+                    </form>
+
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div class="blurred-container">
+            <div class="img-src" style="background-image: url('Inicio_Sesion/fondo.jpg')"></div>
+        </div>
+    </div><!--  end navbar -->
+
+</div> <!-- end menu-dropdown -->
+
+<div class="main">
+    <div class="container tim-container" style="max-width:800px; padding-top:100px">
+        <div style="background-color: #D4AF37">
+        <form method="post">
+            <div id="crear" class="container tab-pane active">
+                <div class="col-lg-6 bg-indigo text-white ui-icon-background">
+                    <div class="p-5">
+                        <h3 class="fw-normal mb-5">Editar Viaje</h3>
+
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4 pb-2">
+
+                                <div class="form-outline form-white">
+                                    <input type="date" id="fecha_reserva" class="form-control form-control-lg">
+                                    <label class="form-label" for="fecha_reserva" style="margin-left: 0px;">Fecha de reserva</label>
+                                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 58.4px;"></div><div class="form-notch-trailing"></div></div></div>
+
+                            </div>
+                            <div class="col-md-6 mb-4 pb-2">
+
+                                <div class="form-outline form-white">
+                                    <input type="date" id="fecha_viaje" class="form-control form-control-lg">
+                                    <label class="form-label" for="fecha_viaje" style="margin-left: 0px;">Fecha de viaje</label>
+                                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 40px;"></div><div class="form-notch-trailing"></div></div></div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4 pb-2">
+
+                                <div class="form-outline form-white">
+                                    <select type="text" id="origen" class="form-control form-control-lg">
+                                        <option selected></option>
+                                        <option value="1">Two</option>
+                                        <option value="2">Three</option>
+                                        <option value="3">Four</option>
+                                    </select>
+                                    <label class="form-label" for="origen" style="margin-left: 0px;">Ciudad Origen</label>
+                                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 58.4px;"></div><div class="form-notch-trailing"></div></div></div>
+
+                            </div>
+                            <div class="col-md-6 mb-4 pb-2">
+
+                                <div class="form-outline form-white">
+                                    <select type="text" id="destino" class="form-control form-control-lg">
+                                        <option selected></option>
+                                        <option value="1">Two</option>
+                                        <option value="2">Three</option>
+                                        <option value="3">Four</option>
+                                    </select>
+                                    <label class="form-label" for="destino" style="margin-left: 0px;">Ciudad Destino</label>
+                                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 58.4px;"></div><div class="form-notch-trailing"></div></div></div>
+
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-4 pb-2">
+
+                                <div class="form-outline form-white">
+                                    <select type="text" id="seguros" class="form-control form-control-lg">
+                                        <option selected></option>
+                                        <option value="1">Two</option>
+                                        <option value="2">Three</option>
+                                        <option value="3">Four</option>
+                                    </select>
+                                    <label class="form-label" for="seguros" style="margin-left: 0px;">Empresa de Seguros</label>
+                                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 58.4px;"></div><div class="form-notch-trailing"></div></div></div>
+
+                            </div>
+                            <div class="col-md-3 mb-4 pb-2">
+                                <div class="form-outline form-white">
+                                    <input type="text" id="boletos" class="form-control form-control-lg">
+                                    <label class="form-label" for="boletos" style="margin-left: 0px;">Número de Boletos</label>
+                                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 40px;"></div><div class="form-notch-trailing"></div></div></div>
+
+                            </div>
+                            <div class="col-md-3 mb-4 pb-2">
+                                <div class="form-outline form-white">
+                                    <input type="text" id="Costo" class="form-control form-control-lg">
+                                    <label class="form-label" for="costo" style="margin-left: 0px;">Costo total</label>
+                                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 40px;"></div><div class="form-notch-trailing"></div></div></div>
+
+                            </div>
+
+                        </div>
+                        <button type="button" class="btn btn-light btn-lg" style="margin-bottom: fill; color:#000000; background-color: #ffecb5"   data-mdb-ripple-color="dark">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        </div>
+
+
+
+
+
+        <div class="col-md-12">
+            <br>
+            <div class="space-100"></div>
+            <div class="row">
+                <div class="col-sm-4"></div>
+
+                <div class="col-sm-4"></div>
+            </div>
+            <div class="space-100"></div>
+            <p class="text-center">Copyright &copy; 2022, made with Marcelo, Ray and Caleb <i class="fa fa-heart"></i> for a Lab10.</p>
+            <!-- end container -->
+        </div>
+    <!-- end main -->
+    </div>
+
+</div>
+
+</body>
+
+<script src="header_principal/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="header_principal/js/bootstrap.js" type="text/javascript"></script>
+
+<script src="header_principal/js/ct-navbar.js"></script>
+
+
+</html>
