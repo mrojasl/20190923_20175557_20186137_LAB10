@@ -5,9 +5,81 @@ public class BViaje {
     private String codido_pucp;
     private String fecha_reserva;
     private String fecha_viaje;
+    private int idCiudadOrigen;
+    private int idCiudadDestino;
+    private String ciudadOrigen;
+    private String ciudadDestino;
     private int cantidad_tickets;
-    private int idcostos_ciudad;
-    private int idseguro;
+    private double costoTotal;
+    private int idSeguro;
+    private int idCostos_ciudad;
+    private String seguro;
+
+    public double getCostoTotal() {
+        return costoTotal;
+    }
+
+    public void setCostoTotal(double costoTotal) {
+        this.costoTotal = costoTotal;
+    }
+
+    public String getSeguro() {
+        return seguro;
+    }
+
+    public void setSeguro(String seguro) {
+        this.seguro = seguro;
+    }
+
+    public int getIdCostos_ciudad() {
+        return idCostos_ciudad;
+    }
+
+    public void setIdCostos_ciudad(int idCostos_ciudad) {
+        this.idCostos_ciudad = idCostos_ciudad;
+    }
+
+    public int getIdCiudadOrigen() {
+        return idCiudadOrigen;
+    }
+
+    public void setIdCiudadOrigen(int idCiudadOrigen) {
+        this.idCiudadOrigen = idCiudadOrigen;
+    }
+
+    public int getIdCiudadDestino() {
+        return idCiudadDestino;
+    }
+
+    public void setIdCiudadDestino(int idCiudadDestino) {
+        this.idCiudadDestino = idCiudadDestino;
+    }
+
+    public int getIdSeguro() {
+        return idSeguro;
+    }
+
+    public void setIdSeguro(int idSeguro) {
+        this.idSeguro = idSeguro;
+    }
+
+    public String getCiudadOrigen() {
+        return ciudadOrigen;
+    }
+
+    public void setCiudadOrigen(String ciudadOrigen) {
+        this.ciudadOrigen = ciudadOrigen;
+    }
+
+    public String getCiudadDestino() {
+        return ciudadDestino;
+    }
+
+    public void setCiudadDestino(String ciudadDestino) {
+        this.ciudadDestino = ciudadDestino;
+    }
+
+
 
     public String getCodido_pucp() {
         return codido_pucp;
@@ -15,22 +87,6 @@ public class BViaje {
 
     public void setCodido_pucp(String codido_pucp) {
         this.codido_pucp = codido_pucp;
-    }
-
-    public int getIdcostos_ciudad() {
-        return idcostos_ciudad;
-    }
-
-    public void setIdcostos_ciudad(int idcostos_ciudad) {
-        this.idcostos_ciudad = idcostos_ciudad;
-    }
-
-    public int getIdseguro() {
-        return idseguro;
-    }
-
-    public void setIdseguro(int idseguro) {
-        this.idseguro = idseguro;
     }
 
     public int getIdviaje() {

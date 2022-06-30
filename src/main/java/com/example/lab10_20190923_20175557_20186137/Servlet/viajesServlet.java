@@ -65,8 +65,8 @@ public class viajesServlet extends HttpServlet {
                 viaje.setFecha_reserva(request.getParameter("fecha_reserva"));
                 viaje.setFecha_viaje(request.getParameter("fecha_viaje"));
                 viaje.setCantidad_tickets(Integer.parseInt(request.getParameter("cant_tickets")));
-                viaje.setIdcostos_ciudad(Integer.parseInt(request.getParameter("id_costos")));
-                viaje.setIdseguro(Integer.parseInt(request.getParameter("id_seguro")));
+                viaje.setIdCostos_ciudad(Integer.parseInt(request.getParameter("id_costos")));
+                viaje.setIdSeguro(Integer.parseInt(request.getParameter("id_seguro")));
                 empresaDaos.crearViaje(viaje);
                 response.sendRedirect("viajesServlet");
         }
